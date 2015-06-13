@@ -23,15 +23,29 @@ class FairyDishViewController: UIViewController {
     let happy = ["rightEye": "happy_right_eye", "leftEye":"happy_left_eye","mouth":"happy_mouth"]
     private var manager : EmotionManager! = EmotionManager.instance
     
+    var timer:NSTimer?
+    
+    deinit{
+        timer?.invalidate()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.manager.delegate = self
+//        self.manager.delegate = self
         
-        self.manager.calibrate()
+//        self.manager.calibrate()
         
-        FairyPlayerManager.playFairyAudio()
-        toAnger()
+//        FairyPlayerManager.playFairyAudio()
+        toGrad()
+        setBlinkTimer()
+        
+        
+    }
+    
+    private func setBlinkTimer(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("blink"), userInfo: nil, repeats: true)
+    
     }
     
     
@@ -61,6 +75,11 @@ class FairyDishViewController: UIViewController {
         rightEye.image = UIImage(named: happy["rightEye"]!)
         leftEye.image = UIImage(named: happy["leftEye"]!)
         mouth.image = UIImage(named: happy["mouth"]!)
+    }
+    
+    
+    func blink(){
+        println("blink")
     }
     
     // 通常
