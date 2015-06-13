@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		401507B91B2C096E005489B1 /* EmotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401507B81B2C096E005489B1 /* EmotionManager.swift */; };
 		7E509FD01B2BF5C40010053A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FCF1B2BF5C40010053A /* AppDelegate.swift */; };
 		7E509FD21B2BF5C40010053A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FD11B2BF5C40010053A /* MainViewController.swift */; };
 		7E509FD51B2BF5C40010053A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E509FD31B2BF5C40010053A /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		401507B81B2C096E005489B1 /* EmotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionManager.swift; sourceTree = "<group>"; };
 		7E509FCA1B2BF5C40010053A /* dishLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dishLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E509FCE1B2BF5C40010053A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E509FCF1B2BF5C40010053A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		7E509FCC1B2BF5C40010053A /* dishLand */ = {
 			isa = PBXGroup;
 			children = (
+				401507B81B2C096E005489B1 /* EmotionManager.swift */,
 				7E509FCF1B2BF5C40010053A /* AppDelegate.swift */,
 				7E509FD11B2BF5C40010053A /* MainViewController.swift */,
 				7E509FD31B2BF5C40010053A /* Main.storyboard */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E509FD21B2BF5C40010053A /* MainViewController.swift in Sources */,
+				401507B91B2C096E005489B1 /* EmotionManager.swift in Sources */,
 				7E509FF01B2BFDC30010053A /* FairyDishViewController.swift in Sources */,
 				7E509FD01B2BF5C40010053A /* AppDelegate.swift in Sources */,
 			);
@@ -413,6 +417,7 @@
 				7E509FEB1B2BF5C40010053A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E509FEC1B2BF5C40010053A /* Build configuration list for PBXNativeTarget "dishLandTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				7E509FEE1B2BF5C40010053A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
