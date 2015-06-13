@@ -38,12 +38,12 @@ class FairyDishViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.manager.delegate = self
+        self.manager.delegate = self
         
-//        self.manager.calibrate()
+        self.manager.calibrate()
         
-//        FairyPlayerManager.playFairyAudio()
-        toAnger()
+        FairyPlayerManager.playFairyAudio()
+        toHappy()
         setBlinkTimer()
         
         
