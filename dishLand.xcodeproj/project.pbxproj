@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7E509FD01B2BF5C40010053A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FCF1B2BF5C40010053A /* AppDelegate.swift */; };
-		7E509FD21B2BF5C40010053A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FD11B2BF5C40010053A /* ViewController.swift */; };
+		7E509FD21B2BF5C40010053A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FD11B2BF5C40010053A /* MainViewController.swift */; };
 		7E509FD51B2BF5C40010053A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E509FD31B2BF5C40010053A /* Main.storyboard */; };
 		7E509FD71B2BF5C40010053A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E509FD61B2BF5C40010053A /* Images.xcassets */; };
 		7E509FDA1B2BF5C40010053A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E509FD81B2BF5C40010053A /* LaunchScreen.xib */; };
 		7E509FE61B2BF5C40010053A /* dishLandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FE51B2BF5C40010053A /* dishLandTests.swift */; };
+		7E509FF01B2BFDC30010053A /* FairyDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FEF1B2BFDC30010053A /* FairyDishViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		7E509FCA1B2BF5C40010053A /* dishLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dishLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E509FCE1B2BF5C40010053A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E509FCF1B2BF5C40010053A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E509FD11B2BF5C40010053A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E509FD11B2BF5C40010053A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7E509FD41B2BF5C40010053A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E509FD61B2BF5C40010053A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7E509FD91B2BF5C40010053A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7E509FDF1B2BF5C40010053A /* dishLandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dishLandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E509FE41B2BF5C40010053A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E509FE51B2BF5C40010053A /* dishLandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dishLandTests.swift; sourceTree = "<group>"; };
+		7E509FEF1B2BFDC30010053A /* FairyDishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyDishViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				7E509FCF1B2BF5C40010053A /* AppDelegate.swift */,
-				7E509FD11B2BF5C40010053A /* ViewController.swift */,
+				7E509FD11B2BF5C40010053A /* MainViewController.swift */,
 				7E509FD31B2BF5C40010053A /* Main.storyboard */,
 				7E509FD61B2BF5C40010053A /* Images.xcassets */,
 				7E509FD81B2BF5C40010053A /* LaunchScreen.xib */,
 				7E509FCD1B2BF5C40010053A /* Supporting Files */,
+				7E509FEF1B2BFDC30010053A /* FairyDishViewController.swift */,
 			);
 			path = dishLand;
 			sourceTree = "<group>";
@@ -212,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E509FD21B2BF5C40010053A /* ViewController.swift in Sources */,
+				7E509FD21B2BF5C40010053A /* MainViewController.swift in Sources */,
+				7E509FF01B2BFDC30010053A /* FairyDishViewController.swift in Sources */,
 				7E509FD01B2BF5C40010053A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
