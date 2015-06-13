@@ -29,10 +29,11 @@ class FairyDishViewController: UIViewController {
     let blinkEyes = ["rightEye":"blink_right_eye","leftEye":"blink_left_eye"]
     private var manager : EmotionManager! = EmotionManager.instance
     
-    var timer:NSTimer?
+    var blinkTimer:NSTimer?
+    var speakingTimer:NSTimer?
     
     deinit{
-        timer?.invalidate()
+        blinkTimer?.invalidate()
     }
     
     override func viewDidLoad() {
@@ -43,15 +44,21 @@ class FairyDishViewController: UIViewController {
         self.manager.calibrate()
         
         FairyPlayerManager.playFairyAudio()
-        toHappy()
+        toGrad()
         setBlinkTimer()
+        
+        startSpeaking()
+        let delay = 20 * Double(NSEC_PER_SEC)
+        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.stopSpeaking()
+        })
         
         
     }
     
     private func setBlinkTimer(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("blink"), userInfo: nil, repeats: true)
-    
+        blinkTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("blink"), userInfo: nil, repeats: true)
     }
     
     
@@ -113,19 +120,6 @@ class FairyDishViewController: UIViewController {
         })
     }
     
-    //to blink mode
-    func blink(){
-        rightEye.image = UIImage(named: blinkEyes["rightEye"]!)
-        leftEye.image = UIImage(named: blinkEyes["leftEye"]!)
-
-        //after 0.2sec to emotion state
-        let delay = 0.2 * Double(NSEC_PER_SEC)
-        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        dispatch_after(time, dispatch_get_main_queue(), {
-            self.changeEmotion(self.emotion)
-        })
-    }
-    
     // 通常
     private func toNormal()
     {
@@ -135,9 +129,162 @@ class FairyDishViewController: UIViewController {
         mouth.image = UIImage(named: normal["mouth"]!)
     }
     
-    // タイマー走らせて
-    private func speaking(){
+    
+    //for Eye
+    //喜
+    private func toGradEye(){
+        emotion = EMOTIONS.glad
+        rightEye.image = UIImage(named: grad["rightEye"]!)
+        leftEye.image = UIImage(named: grad["leftEye"]!)
+    }
+    
+    //怒
+    private func toAngerEye(){
+        emotion = EMOTIONS.anger
+        rightEye.image = UIImage(named:anger["rightEye"]!)
+        leftEye.image = UIImage(named: anger["leftEye"]!)
+    }
+    
+    //哀
+    private func toSadEye(){
+        emotion = EMOTIONS.sad
+        rightEye.image = UIImage(named: sad["rightEye"]!)
+        leftEye.image = UIImage(named: sad["leftEye"]!)
+    }
+    
+    //楽
+    private func toHappyEye(){
+        emotion = EMOTIONS.happy
+        rightEye.image = UIImage(named: happy["rightEye"]!)
+        leftEye.image = UIImage(named: happy["leftEye"]!)
+
+    }
+    
+    // 通常
+    private func toNormalEye()
+    {
+        emotion = EMOTIONS.normal
+        rightEye.image = UIImage(named: normal["rightEye"]!)
+        leftEye.image = UIImage(named: normal["leftEye"]!)
+    }
+    
+    //for Mouth
+    //喜
+    private func toGradMouth(){
+        emotion = EMOTIONS.glad
+        mouth.image = UIImage(named: grad["mouth"]!)
+    }
+    
+    //怒
+    private func toAngerMouth(){
+        emotion = EMOTIONS.anger
+        mouth.image = UIImage(named:anger["mouth"]!)
+    }
+    
+    //哀
+    private func toSadMouth(){
+        emotion = EMOTIONS.sad
+        mouth.image = UIImage(named: sad["mouth"]!)
+    }
+    
+    //楽
+    private func toHappyMouth(){
+        emotion = EMOTIONS.happy
+        mouth.image = UIImage(named: happy["mouth"]!)
+    }
+    
+    // 通常
+    private func toNormalMouth()
+    {
+        emotion = EMOTIONS.normal
+        mouth.image = UIImage(named: normal["mouth"]!)
+    }
+    
+    
+    //to blink mode
+    func blink(){
+        rightEye.image = UIImage(named: blinkEyes["rightEye"]!)
+        leftEye.image = UIImage(named: blinkEyes["leftEye"]!)
+
+        //after 0.2sec to emotion state
+        let delay = 0.2 * Double(NSEC_PER_SEC)
+        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.changeEmotionEye(self.emotion)
+        })
+    }
+    
+
+    
+    // タイマー走らせて口パクパク
+    private func startSpeaking(){
+        speakingTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("speaking"), userInfo: nil, repeats: true)
+    }
+    
+    //to speaking mode
+    func speaking(){
+        mouth.image = UIImage(named: normal["mouth"]!)
         
+        //after 0.2sec to emotion state
+        let delay = 0.2 * Double(NSEC_PER_SEC)
+        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.changeEmotionMouth(self.emotion)
+        })
+    }
+    
+    //口パクパクを修正
+    private func stopSpeaking(){
+        speakingTimer?.invalidate()
+        self.changeEmotion(self.emotion)
+    }
+    
+    
+    private func changeEmotionEye(emotion: EMOTIONS){
+        switch(emotion)
+        {
+        case .normal:
+            self.toNormalEye()
+            break
+        case .glad:
+            self.toGradEye()
+            break
+        case .anger:
+            self.toAngerEye()
+            break
+        case .happy:
+            self.toHappyEye()
+            break
+        case .sad:
+            self.toSadEye()
+            break
+        default:
+            self.toNormalEye()
+            break
+        }
+    }
+    private func changeEmotionMouth(emotion: EMOTIONS){
+        switch(emotion)
+        {
+        case .normal:
+            self.toNormalMouth()
+            break
+        case .glad:
+            self.toGradMouth()
+            break
+        case .anger:
+            self.toAngerMouth()
+            break
+        case .happy:
+            self.toHappyMouth()
+            break
+        case .sad:
+            self.toSadMouth()
+            break
+        default:
+            self.toNormalMouth()
+            break
+        }
     }
     
 }
