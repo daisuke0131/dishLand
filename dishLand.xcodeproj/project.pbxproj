@@ -15,6 +15,7 @@
 		7E509FDA1B2BF5C40010053A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E509FD81B2BF5C40010053A /* LaunchScreen.xib */; };
 		7E509FE61B2BF5C40010053A /* dishLandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FE51B2BF5C40010053A /* dishLandTests.swift */; };
 		7E509FF01B2BFDC30010053A /* FairyDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FEF1B2BFDC30010053A /* FairyDishViewController.swift */; };
+		7E7EF9291B2C15E80096BD4C /* FairyPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EF9281B2C15E80096BD4C /* FairyPlayerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		7E509FE41B2BF5C40010053A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E509FE51B2BF5C40010053A /* dishLandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dishLandTests.swift; sourceTree = "<group>"; };
 		7E509FEF1B2BFDC30010053A /* FairyDishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyDishViewController.swift; sourceTree = "<group>"; };
+		7E7EF9281B2C15E80096BD4C /* FairyPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyPlayerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				7E509FD81B2BF5C40010053A /* LaunchScreen.xib */,
 				7E509FCD1B2BF5C40010053A /* Supporting Files */,
 				7E509FEF1B2BFDC30010053A /* FairyDishViewController.swift */,
+				7E7EF9281B2C15E80096BD4C /* FairyPlayerManager.swift */,
 			);
 			path = dishLand;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E7EF9291B2C15E80096BD4C /* FairyPlayerManager.swift in Sources */,
 				7E509FD21B2BF5C40010053A /* MainViewController.swift in Sources */,
 				401507B91B2C096E005489B1 /* EmotionManager.swift in Sources */,
 				7E509FF01B2BFDC30010053A /* FairyDishViewController.swift in Sources */,
