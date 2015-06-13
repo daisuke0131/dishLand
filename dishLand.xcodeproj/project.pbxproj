@@ -16,6 +16,13 @@
 		7E509FE61B2BF5C40010053A /* dishLandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FE51B2BF5C40010053A /* dishLandTests.swift */; };
 		7E509FF01B2BFDC30010053A /* FairyDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FEF1B2BFDC30010053A /* FairyDishViewController.swift */; };
 		7E7EF9291B2C15E80096BD4C /* FairyPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EF9281B2C15E80096BD4C /* FairyPlayerManager.swift */; };
+		7E7EF9311B2C199A0096BD4C /* eiyo_tottenno.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92A1B2C199A0096BD4C /* eiyo_tottenno.wav */; };
+		7E7EF9321B2C199A0096BD4C /* kanpai.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92B1B2C199A0096BD4C /* kanpai.wav */; };
+		7E7EF9331B2C199A0096BD4C /* nakayoku_site.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92C1B2C199A0096BD4C /* nakayoku_site.wav */; };
+		7E7EF9341B2C199A0096BD4C /* nomuno_hayai.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92D1B2C199A0096BD4C /* nomuno_hayai.wav */; };
+		7E7EF9351B2C199A0096BD4C /* syasin_totta.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92E1B2C199A0096BD4C /* syasin_totta.wav */; };
+		7E7EF9361B2C199A0096BD4C /* totta_syasin_dayo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92F1B2C199A0096BD4C /* totta_syasin_dayo.wav */; };
+		7E7EF9371B2C199A0096BD4C /* yasai_tonnakya.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF9301B2C199A0096BD4C /* yasai_tonnakya.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +49,13 @@
 		7E509FE51B2BF5C40010053A /* dishLandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dishLandTests.swift; sourceTree = "<group>"; };
 		7E509FEF1B2BFDC30010053A /* FairyDishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyDishViewController.swift; sourceTree = "<group>"; };
 		7E7EF9281B2C15E80096BD4C /* FairyPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyPlayerManager.swift; sourceTree = "<group>"; };
+		7E7EF92A1B2C199A0096BD4C /* eiyo_tottenno.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eiyo_tottenno.wav; sourceTree = "<group>"; };
+		7E7EF92B1B2C199A0096BD4C /* kanpai.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kanpai.wav; sourceTree = "<group>"; };
+		7E7EF92C1B2C199A0096BD4C /* nakayoku_site.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nakayoku_site.wav; sourceTree = "<group>"; };
+		7E7EF92D1B2C199A0096BD4C /* nomuno_hayai.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nomuno_hayai.wav; sourceTree = "<group>"; };
+		7E7EF92E1B2C199A0096BD4C /* syasin_totta.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = syasin_totta.wav; sourceTree = "<group>"; };
+		7E7EF92F1B2C199A0096BD4C /* totta_syasin_dayo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = totta_syasin_dayo.wav; sourceTree = "<group>"; };
+		7E7EF9301B2C199A0096BD4C /* yasai_tonnakya.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yasai_tonnakya.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +101,7 @@
 				7E509FCF1B2BF5C40010053A /* AppDelegate.swift */,
 				7E509FD11B2BF5C40010053A /* MainViewController.swift */,
 				7E509FD31B2BF5C40010053A /* Main.storyboard */,
+				7E7EF9381B2C19A90096BD4C /* fairyAudios */,
 				7E509FD61B2BF5C40010053A /* Images.xcassets */,
 				7E509FD81B2BF5C40010053A /* LaunchScreen.xib */,
 				7E509FCD1B2BF5C40010053A /* Supporting Files */,
@@ -119,6 +134,20 @@
 				7E509FE41B2BF5C40010053A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E7EF9381B2C19A90096BD4C /* fairyAudios */ = {
+			isa = PBXGroup;
+			children = (
+				7E7EF92A1B2C199A0096BD4C /* eiyo_tottenno.wav */,
+				7E7EF92B1B2C199A0096BD4C /* kanpai.wav */,
+				7E7EF92C1B2C199A0096BD4C /* nakayoku_site.wav */,
+				7E7EF92D1B2C199A0096BD4C /* nomuno_hayai.wav */,
+				7E7EF92E1B2C199A0096BD4C /* syasin_totta.wav */,
+				7E7EF92F1B2C199A0096BD4C /* totta_syasin_dayo.wav */,
+				7E7EF9301B2C199A0096BD4C /* yasai_tonnakya.wav */,
+			);
+			name = fairyAudios;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +231,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E509FD51B2BF5C40010053A /* Main.storyboard in Resources */,
+				7E7EF9321B2C199A0096BD4C /* kanpai.wav in Resources */,
+				7E7EF9331B2C199A0096BD4C /* nakayoku_site.wav in Resources */,
+				7E7EF9311B2C199A0096BD4C /* eiyo_tottenno.wav in Resources */,
 				7E509FDA1B2BF5C40010053A /* LaunchScreen.xib in Resources */,
+				7E7EF9371B2C199A0096BD4C /* yasai_tonnakya.wav in Resources */,
+				7E7EF9341B2C199A0096BD4C /* nomuno_hayai.wav in Resources */,
+				7E7EF9361B2C199A0096BD4C /* totta_syasin_dayo.wav in Resources */,
+				7E7EF9351B2C199A0096BD4C /* syasin_totta.wav in Resources */,
 				7E509FD71B2BF5C40010053A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

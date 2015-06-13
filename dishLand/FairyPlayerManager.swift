@@ -11,21 +11,25 @@ import AVFoundation
 
 class FairyPlayerManager: NSObject,AVAudioPlayerDelegate {
    
+    static var sharedInstance = FairyPlayerManager()
     var player: AVAudioPlayer?
     
     override init() {
         super.init()
-        
+    }
+    
+    class func playFairyAudio(){
+        sharedInstance.playFairyAudio()
 
     }
     
-    func playFairyAudio(){
-        let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("fairyAudio", ofType: "mp3")!)
+    private func playFairyAudio(){
+        let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("kanpai", ofType: "wav")!)
         
         if let p = AVAudioPlayer(contentsOfURL: audioPath, error: nil){
             player = p
             player!.delegate = self
-            player!.prepareToPlay()
+            player!.play()
         }
     }
     

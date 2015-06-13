@@ -24,6 +24,8 @@ class FairyDishViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        FairyPlayerManager.playFairyAudio()
 
     }
     
