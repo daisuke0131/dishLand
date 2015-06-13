@@ -48,23 +48,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お皿さんの顔" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="817-Td-0is">
-                                <rect key="frame" x="16" y="20" width="102" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="waO-3h-p3X">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_eye" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-Px-CCa">
+                                <rect key="frame" x="209" y="235" width="22" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="ZfN-z6-6js"/>
+                                    <constraint firstAttribute="width" constant="22" id="cLC-KH-rCR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_eye" translatesAutoresizingMaskIntoConstraints="NO" id="39f-Ve-8OD">
+                                <rect key="frame" x="369" y="235" width="22" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="E4I-x9-dan"/>
+                                    <constraint firstAttribute="height" constant="71" id="r5l-Cg-bOg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mouth_smile" translatesAutoresizingMaskIntoConstraints="NO" id="QGe-VC-AVO">
+                                <rect key="frame" x="213" y="381" width="175" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="EdC-ok-BWT"/>
+                                    <constraint firstAttribute="width" constant="175" id="LqE-Xh-vwY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="817-Td-0is" firstAttribute="leading" secondItem="PtG-Ul-SRN" secondAttribute="leading" constant="16" id="USE-bs-QFN"/>
-                            <constraint firstItem="817-Td-0is" firstAttribute="top" secondItem="UOw-2N-i6h" secondAttribute="bottom" id="nNa-MJ-kxq"/>
+                            <constraint firstItem="waO-3h-p3X" firstAttribute="leading" secondItem="PtG-Ul-SRN" secondAttribute="leading" id="1QD-n8-dlZ"/>
+                            <constraint firstItem="JQo-Qk-WQv" firstAttribute="top" secondItem="waO-3h-p3X" secondAttribute="bottom" id="9Hz-En-HHB"/>
+                            <constraint firstAttribute="centerX" secondItem="QGe-VC-AVO" secondAttribute="centerX" id="CKR-hz-nC6"/>
+                            <constraint firstItem="39f-Ve-8OD" firstAttribute="top" secondItem="aTC-Px-CCa" secondAttribute="top" id="SMv-4T-JEp"/>
+                            <constraint firstAttribute="centerY" secondItem="aTC-Px-CCa" secondAttribute="centerY" constant="30" id="dPd-Qc-zLe"/>
+                            <constraint firstAttribute="trailing" secondItem="waO-3h-p3X" secondAttribute="trailing" id="fWz-0A-a1h"/>
+                            <constraint firstItem="waO-3h-p3X" firstAttribute="top" secondItem="PtG-Ul-SRN" secondAttribute="top" id="h8k-dO-4iX"/>
+                            <constraint firstItem="QGe-VC-AVO" firstAttribute="top" secondItem="39f-Ve-8OD" secondAttribute="bottom" constant="75" id="hsP-cQ-enl"/>
+                            <constraint firstAttribute="centerX" secondItem="aTC-Px-CCa" secondAttribute="centerX" constant="80" id="pPx-TO-GcH"/>
+                            <constraint firstAttribute="centerX" secondItem="39f-Ve-8OD" secondAttribute="centerX" constant="-80" id="qKc-RT-9BA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="leftEye" destination="39f-Ve-8OD" id="Hf5-5g-v7o"/>
+                        <outlet property="mouth" destination="QGe-VC-AVO" id="ToQ-F4-dSi"/>
+                        <outlet property="rightEye" destination="aTC-Px-CCa" id="saK-Cd-t14"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5S-9G-Hug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="995" y="142"/>
+            <point key="canvasLocation" x="1008" y="178"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="left_eye" width="22" height="71"/>
+        <image name="mouth_smile" width="174" height="54"/>
+        <image name="right_eye" width="22" height="71"/>
+    </resources>
 </document>
