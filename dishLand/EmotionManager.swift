@@ -127,15 +127,34 @@ final class EmotionManager: NSObject {
             
             if(isBigMove)
             {
-                if(self.isFirst)
+                if(self.isFirst)//初回は乾杯
                 {
                     self.delegate.changeEmotion(.cheers)
-                    self.isFirst = false
-                }
-                else
-                {
                     self.delegate.changeEmotion(.happy)
                     self.emotion = .happy
+                    self.isFirst = false
+                }
+                else//次以降は飲んだことに
+                {
+                    if(self.counterMilSec > self.waitingTime)
+                    {
+                        if(self.counterMilSec < self.waitingTime + 10)
+                        {
+                            self.drinkCount = self.drinkCount + 1 //連続で飲んでいるのをkaunto
+                        }
+                        if(self.drinkCount < 5)
+                        {
+                            self.delegate.changeEmotion(.anger)
+                            self.emotion = .anger
+                            self.drinkCount = 0
+                        }
+                        else
+                        {
+                            self.delegate.changeEmotion(.glad)
+                            self.emotion = .glad
+                        }
+                    }
+                    
                 }
                 self.counterMilSec = 0
             }
