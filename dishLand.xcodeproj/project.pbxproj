@@ -23,6 +23,7 @@
 		7E7EF9351B2C199A0096BD4C /* syasin_totta.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92E1B2C199A0096BD4C /* syasin_totta.wav */; };
 		7E7EF9361B2C199A0096BD4C /* totta_syasin_dayo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92F1B2C199A0096BD4C /* totta_syasin_dayo.wav */; };
 		7E7EF9371B2C199A0096BD4C /* yasai_tonnakya.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF9301B2C199A0096BD4C /* yasai_tonnakya.wav */; };
+		7E7EF93A1B2C39810096BD4C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EF9391B2C39810096BD4C /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		7E7EF92E1B2C199A0096BD4C /* syasin_totta.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = syasin_totta.wav; sourceTree = "<group>"; };
 		7E7EF92F1B2C199A0096BD4C /* totta_syasin_dayo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = totta_syasin_dayo.wav; sourceTree = "<group>"; };
 		7E7EF9301B2C199A0096BD4C /* yasai_tonnakya.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yasai_tonnakya.wav; sourceTree = "<group>"; };
+		7E7EF9391B2C39810096BD4C /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				7E509FCD1B2BF5C40010053A /* Supporting Files */,
 				7E509FEF1B2BFDC30010053A /* FairyDishViewController.swift */,
 				7E7EF9281B2C15E80096BD4C /* FairyPlayerManager.swift */,
+				7E7EF9391B2C39810096BD4C /* StartViewController.swift */,
 			);
 			path = dishLand;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				401507B91B2C096E005489B1 /* EmotionManager.swift in Sources */,
 				7E509FF01B2BFDC30010053A /* FairyDishViewController.swift in Sources */,
 				7E509FD01B2BF5C40010053A /* AppDelegate.swift in Sources */,
+				7E7EF93A1B2C39810096BD4C /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

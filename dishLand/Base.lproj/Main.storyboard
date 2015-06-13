@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IAd-MS-eeP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="PsR-VG-ndp">
+            <objects>
+                <navigationController id="IAd-MS-eeP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r4Y-fv-pQv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="xAz-1a-drA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wjd-ow-W6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-647" y="161"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -29,12 +45,69 @@
                             <constraint firstItem="RFY-80-3VA" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="vQq-BF-iXB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8kr-2x-gKu"/>
                     <connections>
                         <outlet property="containerView" destination="RFY-80-3VA" id="Pd6-AD-F7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="156"/>
+        </scene>
+        <!--Start View Controller-->
+        <scene sceneID="ilO-Uk-aFv">
+            <objects>
+                <viewController storyboardIdentifier="start" id="HCu-o1-3VG" customClass="StartViewController" customModule="dishLand" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wLc-WH-keu"/>
+                        <viewControllerLayoutGuide type="bottom" id="dt0-Zw-v6k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UZH-nR-DFp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhS-uz-XdN">
+                                <rect key="frame" x="177" y="498" width="247" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="247" id="NEO-R2-CdU"/>
+                                    <constraint firstAttribute="height" constant="57" id="dae-Qi-1fw"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="btn_start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedStart:" destination="HCu-o1-3VG" eventType="touchUpInside" id="uFg-IV-gow"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="face_okan" translatesAutoresizingMaskIntoConstraints="NO" id="PDa-P4-Sb6">
+                                <rect key="frame" x="177" y="184" width="247" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="F0H-XA-x0c"/>
+                                    <constraint firstAttribute="width" constant="247" id="c2V-hm-r02"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="title_okan" translatesAutoresizingMaskIntoConstraints="NO" id="TxK-e9-27T">
+                                <rect key="frame" x="163" y="60" width="274" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Nt9-7E-cl5"/>
+                                    <constraint firstAttribute="width" constant="274" id="Z5T-DF-R0Z"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TxK-e9-27T" firstAttribute="top" secondItem="wLc-WH-keu" secondAttribute="bottom" constant="40" id="0qG-AK-OHc"/>
+                            <constraint firstAttribute="centerX" secondItem="TxK-e9-27T" secondAttribute="centerX" id="3sb-iR-B6A"/>
+                            <constraint firstItem="PDa-P4-Sb6" firstAttribute="top" secondItem="TxK-e9-27T" secondAttribute="bottom" constant="52" id="ALq-7v-m5t"/>
+                            <constraint firstItem="EhS-uz-XdN" firstAttribute="top" secondItem="PDa-P4-Sb6" secondAttribute="bottom" constant="67" id="AR8-4t-Vnv"/>
+                            <constraint firstAttribute="centerX" secondItem="PDa-P4-Sb6" secondAttribute="centerX" id="izs-fw-7B7"/>
+                            <constraint firstAttribute="centerX" secondItem="EhS-uz-XdN" secondAttribute="centerX" id="n9F-6A-bxu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1D-bE-hO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="903"/>
         </scene>
         <!--Fairy Dish View Controller-->
         <scene sceneID="9WS-7A-zwg">
@@ -111,13 +184,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5S-9G-Hug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008" y="178"/>
+            <point key="canvasLocation" x="985" y="136"/>
         </scene>
     </scenes>
     <resources>
-        <image name="face" width="302" height="302"/>
+        <image name="btn_start" width="248" height="62"/>
+        <image name="face" width="301" height="301"/>
+        <image name="face_okan" width="247" height="247"/>
         <image name="happy_left_eye" width="66" height="66"/>
         <image name="happy_mouth" width="154" height="85"/>
         <image name="happy_right_eye" width="66" height="66"/>
+        <image name="title_okan" width="274" height="72"/>
     </resources>
 </document>

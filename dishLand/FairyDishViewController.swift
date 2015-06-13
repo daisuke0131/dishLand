@@ -24,6 +24,7 @@ class FairyDishViewController: UIViewController {
     let anger = ["rightEye": "anger_right_eye", "leftEye":"anger_left_eye","mouth":"anger_mouth"]
     let sad = ["rightEye": "sad_right_eye", "leftEye":"sad_left_eye","mouth":"sad_mouth"]
     let happy = ["rightEye": "happy_right_eye", "leftEye":"happy_left_eye","mouth":"happy_mouth"]
+    let normal = ["rightEye": "blink_right_eye", "leftEye":"blink_left_eye","mouth":"close_mouth"]
     
     let blinkEyes = ["rightEye":"blink_right_eye","leftEye":"blink_left_eye"]
     private var manager : EmotionManager! = EmotionManager.instance
@@ -102,6 +103,11 @@ class FairyDishViewController: UIViewController {
     // 通常
     private func toNormal()
     {
+        
+    }
+    
+    // タイマー走らせて
+    private func speaking(){
         
     }
     

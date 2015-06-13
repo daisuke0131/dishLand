@@ -10,8 +10,9 @@ import UIKit
 
 
 enum FairyKind:Int{
-    case fairy1 = 0
-    case fairy2 = 1
+    case start  = 0
+    case fairy1 = 1
+    case fairy2 = 2
 }
 
 
@@ -29,7 +30,7 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        changeFairyView(FairyKind.fairy1)
+        changeFairyView(FairyKind.start)
     }
 
     
@@ -40,12 +41,16 @@ class MainViewController: UIViewController {
         }
         
         switch fairy{
-        case FairyKind.fairy1:
-            fairyVC = storyboard!.instantiateViewControllerWithIdentifier("fairy") as! FairyDishViewController
+        case FairyKind.start:
+            fairyVC = storyboard!.instantiateViewControllerWithIdentifier("start") as? StartViewController
+            (fairyVC as! StartViewController).delegate = self
             self.addChildViewController(fairyVC!)
             fairyVC!.didMoveToParentViewController(self)
             fairyVC!.view.frame = view.frame
             containerView.addSubview(fairyVC!.view)
+        case FairyKind.fairy1:
+            fairyVC = storyboard!.instantiateViewControllerWithIdentifier("fairy") as? FairyDishViewController
+            navigationController?.pushViewController(fairyVC!, animated: true)
         case FairyKind.fairy2:
             break;
         }
@@ -55,5 +60,11 @@ class MainViewController: UIViewController {
     }
 
 
+}
+
+extension MainViewController:StartViewControllerDelegate{
+    func tappedStart(vc: StartViewController) {
+        changeFairyView(FairyKind.fairy1)
+    }
 }
 
