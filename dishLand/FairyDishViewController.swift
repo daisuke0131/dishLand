@@ -17,37 +17,45 @@ class FairyDishViewController: UIViewController {
     
     @IBOutlet weak var mouth: UIImageView!
     
-    let grad = ["rightEye": "glad_right_eye_00", "leftEye":"glad_left_eye_00","mouth":"glad_mouth_00"]
-    let anger = ["rightEye": "anger_right_eye_00", "leftEye":"anger_left_eye_00","mouth":"anger_mouth_00"]
-    let sad = ["rightEye": "sad_right_eye_00", "leftEye":"sad_left_eye_00","mouth":"sad_mouth_00"]
-    let happy = ["rightEye": "happy_right_eye_00", "leftEye":"happy_left_eye_00","mouth":"happy_mouth_00"]
+    let grad = ["rightEye": "glad_right_eye", "leftEye":"glad_left_eye","mouth":"glad_mouth"]
+    let anger = ["rightEye": "anger_right_eye", "leftEye":"anger_left_eye","mouth":"anger_mouth"]
+    let sad = ["rightEye": "sad_right_eye", "leftEye":"sad_left_eye","mouth":"sad_mouth"]
+    let happy = ["rightEye": "happy_right_eye", "leftEye":"happy_left_eye","mouth":"happy_mouth"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         FairyPlayerManager.playFairyAudio()
-
+        toAnger()
     }
     
     
     //喜
     private func toGrad(){
-        
+        rightEye.image = UIImage(named: grad["rightEye"]!)
+        leftEye.image = UIImage(named: grad["leftEye"]!)
+        mouth.image = UIImage(named: grad["mouth"]!)
     }
     
     //怒
     private func toAnger(){
-        
+        rightEye.image = UIImage(named: anger["rightEye"]!)
+        leftEye.image = UIImage(named: anger["leftEye"]!)
+        mouth.image = UIImage(named: anger["mouth"]!)
     }
 
     //哀
     private func toSad(){
-        
+        rightEye.image = UIImage(named: sad["rightEye"]!)
+        leftEye.image = UIImage(named: sad["leftEye"]!)
+        mouth.image = UIImage(named: sad["mouth"]!)
     }
     
     //楽
     private func toHappy(){
-        
+        rightEye.image = UIImage(named: happy["rightEye"]!)
+        leftEye.image = UIImage(named: happy["leftEye"]!)
+        mouth.image = UIImage(named: happy["mouth"]!)
     }
     
 }
