@@ -48,6 +48,7 @@ final class EmotionManager: NSObject {
     private let friq = 0.1 // 計測周期
     
     private var counterMilSec = 0.0
+    private var counterMilSecBuff = 0.0
     
     private let waitingTime = 50.0
     // 感情変化の時間（5s）
@@ -100,6 +101,7 @@ final class EmotionManager: NSObject {
             var isMove = false
             var isBigMove = false
             
+            // 動かしたかの判定
             if(abs(self.xRawData) > self.thresholdBig)
             {
                 isBigMove = true
@@ -125,6 +127,7 @@ final class EmotionManager: NSObject {
                 isMove = true
             }
             
+            // 動かした時の処理
             if(isBigMove)
             {
                 if(self.isFirst)//初回は乾杯
@@ -136,27 +139,24 @@ final class EmotionManager: NSObject {
                 }
                 else//次以降は飲んだことに
                 {
-                    if(self.counterMilSec > self.waitingTime)
+                    self.drinkCount = self.drinkCount + 1 //連続で飲んでいるのをkaunto
+                    if(self.drinkCount > 50)
                     {
-                        if(self.counterMilSec < self.waitingTime + 10)
-                        {
-                            self.drinkCount = self.drinkCount + 1 //連続で飲んでいるのをkaunto
-                        }
-                        if(self.drinkCount < 5)
-                        {
-                            self.delegate.changeEmotion(.anger)
-                            self.emotion = .anger
-                            self.drinkCount = 0
-                        }
-                        else
+                        self.delegate.changeEmotion(.anger)
+                        self.emotion = .anger
+                        self.drinkCount = 0
+                        self.counterMilSec = 0
+                    }
+                    else
+                    {
+                        if(self.emotion != .glad && self.emotion != .anger)// 怒っている時は、喜には遷移しない
                         {
                             self.delegate.changeEmotion(.glad)
                             self.emotion = .glad
+                            self.counterMilSec = 0
                         }
                     }
-                    
                 }
-                self.counterMilSec = 0
             }
                 
             else if(isMove)
@@ -168,6 +168,7 @@ final class EmotionManager: NSObject {
             {
                 // 動かない時限定の処理
             }
+            
             switch(self.emotion)
             {
             case .normal:
