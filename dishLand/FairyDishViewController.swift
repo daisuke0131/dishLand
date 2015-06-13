@@ -57,34 +57,60 @@ class FairyDishViewController: UIViewController {
     
     //喜
     private func toGrad(){
-        emotion = EMOTIONS.glad
-        rightEye.image = UIImage(named: grad["rightEye"]!)
-        leftEye.image = UIImage(named: grad["leftEye"]!)
-        mouth.image = UIImage(named: grad["mouth"]!)
+        toNormal()
+        //after 0.2sec to emotion state
+        let delay = 0.2 * Double(NSEC_PER_SEC)
+        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.emotion = EMOTIONS.glad
+            self.rightEye.image = UIImage(named: self.grad["rightEye"]!)
+            self.leftEye.image = UIImage(named: self.grad["leftEye"]!)
+            self.mouth.image = UIImage(named: self.grad["mouth"]!)
+        })
     }
     
     //怒
     private func toAnger(){
-        emotion = EMOTIONS.anger
-        rightEye.image = UIImage(named: anger["rightEye"]!)
-        leftEye.image = UIImage(named: anger["leftEye"]!)
-        mouth.image = UIImage(named: anger["mouth"]!)
+        toNormal()
+        //after 0.2sec to emotion state
+        let delay = 0.2 * Double(NSEC_PER_SEC)
+        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.emotion = EMOTIONS.anger
+            self.rightEye.image = UIImage(named:self.anger["rightEye"]!)
+            self.leftEye.image = UIImage(named: self.anger["leftEye"]!)
+            self.mouth.image = UIImage(named: self.anger["mouth"]!)
+        })
+
     }
 
     //哀
     private func toSad(){
-        emotion = EMOTIONS.sad
-        rightEye.image = UIImage(named: sad["rightEye"]!)
-        leftEye.image = UIImage(named: sad["leftEye"]!)
-        mouth.image = UIImage(named: sad["mouth"]!)
+        toNormal()
+        
+        //after 0.2sec to emotion state
+        let delay = 0.2 * Double(NSEC_PER_SEC)
+        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.emotion = EMOTIONS.sad
+            self.rightEye.image = UIImage(named: self.sad["rightEye"]!)
+            self.leftEye.image = UIImage(named: self.sad["leftEye"]!)
+            self.mouth.image = UIImage(named: self.sad["mouth"]!)
+        })
     }
     
     //楽
     private func toHappy(){
-        emotion = EMOTIONS.happy
-        rightEye.image = UIImage(named: happy["rightEye"]!)
-        leftEye.image = UIImage(named: happy["leftEye"]!)
-        mouth.image = UIImage(named: happy["mouth"]!)
+        toNormal()
+        //after 0.2sec to emotion state
+        let delay = 0.2 * Double(NSEC_PER_SEC)
+        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.emotion = EMOTIONS.happy
+            self.rightEye.image = UIImage(named: self.happy["rightEye"]!)
+            self.leftEye.image = UIImage(named: self.happy["leftEye"]!)
+            self.mouth.image = UIImage(named: self.happy["mouth"]!)
+        })
     }
     
     //to blink mode
@@ -103,7 +129,10 @@ class FairyDishViewController: UIViewController {
     // 通常
     private func toNormal()
     {
-        
+        emotion = EMOTIONS.normal
+        rightEye.image = UIImage(named: normal["rightEye"]!)
+        leftEye.image = UIImage(named: normal["leftEye"]!)
+        mouth.image = UIImage(named: normal["mouth"]!)
     }
     
     // タイマー走らせて
