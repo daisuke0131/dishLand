@@ -21,9 +21,14 @@ class FairyDishViewController: UIViewController {
     let anger = ["rightEye": "anger_right_eye", "leftEye":"anger_left_eye","mouth":"anger_mouth"]
     let sad = ["rightEye": "sad_right_eye", "leftEye":"sad_left_eye","mouth":"sad_mouth"]
     let happy = ["rightEye": "happy_right_eye", "leftEye":"happy_left_eye","mouth":"happy_mouth"]
-
+    private var manager : EmotionManager! = EmotionManager.instance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.manager.delegate = self
+        
+        self.manager.calibrate()
         
         FairyPlayerManager.playFairyAudio()
         toAnger()
@@ -58,6 +63,11 @@ class FairyDishViewController: UIViewController {
         mouth.image = UIImage(named: happy["mouth"]!)
     }
     
+    // 通常
+    private func toNormal()
+    {
+        
+    }
 }
 
 
@@ -67,5 +77,26 @@ extension FairyDishViewController:EmotionManagerDelegate{
     }
     
     func changeEmotion(emotion: EMOTIONS) {
+        switch(emotion)
+        {
+        case .normal:
+            self.toNormal()
+            break
+        case .glad:
+            self.toGrad()
+            break
+        case .anger:
+            self.toAnger()
+            break
+        case .happy:
+            self.toHappy()
+            break
+        case .sad:
+            self.toSad()
+            break
+        default:
+            self.toNormal()
+            break
+        }
     }
 }
