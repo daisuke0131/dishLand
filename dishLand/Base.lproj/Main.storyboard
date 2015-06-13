@@ -48,43 +48,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="waO-3h-p3X">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_eye" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-Px-CCa">
-                                <rect key="frame" x="209" y="235" width="22" height="71"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAk-QU-4Ze">
+                                <rect key="frame" x="149" y="149" width="302" height="302"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="waO-3h-p3X">
+                                        <rect key="frame" x="0.0" y="0.0" width="302" height="302"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="302" id="8k7-z2-31G"/>
+                                            <constraint firstAttribute="width" constant="302" id="gaF-0L-bHM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy_right_eye" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-Px-CCa">
+                                        <rect key="frame" x="47" y="135" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="ZfN-z6-6js"/>
+                                            <constraint firstAttribute="width" constant="66" id="cLC-KH-rCR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy_mouth" translatesAutoresizingMaskIntoConstraints="NO" id="QGe-VC-AVO">
+                                        <rect key="frame" x="47" y="201" width="154" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="85" id="EdC-ok-BWT"/>
+                                            <constraint firstAttribute="width" constant="154" id="LqE-Xh-vwY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy_left_eye" translatesAutoresizingMaskIntoConstraints="NO" id="39f-Ve-8OD">
+                                        <rect key="frame" x="135" y="135" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="E4I-x9-dan"/>
+                                            <constraint firstAttribute="height" constant="66" id="r5l-Cg-bOg"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="ZfN-z6-6js"/>
-                                    <constraint firstAttribute="width" constant="22" id="cLC-KH-rCR"/>
+                                    <constraint firstItem="aTC-Px-CCa" firstAttribute="leading" secondItem="QGe-VC-AVO" secondAttribute="leading" id="0IO-bn-jSI"/>
+                                    <constraint firstAttribute="trailing" secondItem="waO-3h-p3X" secondAttribute="trailing" id="5uq-ta-PbB"/>
+                                    <constraint firstItem="aTC-Px-CCa" firstAttribute="leading" secondItem="HAk-QU-4Ze" secondAttribute="leading" constant="47" id="9O5-d5-0Pp"/>
+                                    <constraint firstAttribute="bottom" secondItem="waO-3h-p3X" secondAttribute="bottom" id="BCC-AE-lKr"/>
+                                    <constraint firstAttribute="height" constant="302" id="HS9-sQ-7v4"/>
+                                    <constraint firstItem="QGe-VC-AVO" firstAttribute="top" secondItem="aTC-Px-CCa" secondAttribute="bottom" id="WI7-hx-bGF"/>
+                                    <constraint firstItem="39f-Ve-8OD" firstAttribute="trailing" secondItem="QGe-VC-AVO" secondAttribute="trailing" id="hGT-Ew-ry3"/>
+                                    <constraint firstItem="QGe-VC-AVO" firstAttribute="top" secondItem="39f-Ve-8OD" secondAttribute="bottom" id="lnq-Iz-TlJ"/>
+                                    <constraint firstItem="aTC-Px-CCa" firstAttribute="top" secondItem="HAk-QU-4Ze" secondAttribute="top" constant="135" id="omU-C2-L46"/>
+                                    <constraint firstItem="waO-3h-p3X" firstAttribute="top" secondItem="HAk-QU-4Ze" secondAttribute="top" id="qHT-kw-zTK"/>
+                                    <constraint firstAttribute="width" constant="302" id="x14-MW-WfZ"/>
+                                    <constraint firstItem="waO-3h-p3X" firstAttribute="leading" secondItem="HAk-QU-4Ze" secondAttribute="leading" id="yok-3R-sw7"/>
                                 </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_eye" translatesAutoresizingMaskIntoConstraints="NO" id="39f-Ve-8OD">
-                                <rect key="frame" x="369" y="235" width="22" height="71"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="E4I-x9-dan"/>
-                                    <constraint firstAttribute="height" constant="71" id="r5l-Cg-bOg"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mouth_smile" translatesAutoresizingMaskIntoConstraints="NO" id="QGe-VC-AVO">
-                                <rect key="frame" x="213" y="381" width="175" height="54"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="EdC-ok-BWT"/>
-                                    <constraint firstAttribute="width" constant="175" id="LqE-Xh-vwY"/>
-                                </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="waO-3h-p3X" firstAttribute="leading" secondItem="PtG-Ul-SRN" secondAttribute="leading" id="1QD-n8-dlZ"/>
-                            <constraint firstItem="JQo-Qk-WQv" firstAttribute="top" secondItem="waO-3h-p3X" secondAttribute="bottom" id="9Hz-En-HHB"/>
-                            <constraint firstAttribute="centerX" secondItem="QGe-VC-AVO" secondAttribute="centerX" id="CKR-hz-nC6"/>
-                            <constraint firstItem="39f-Ve-8OD" firstAttribute="top" secondItem="aTC-Px-CCa" secondAttribute="top" id="SMv-4T-JEp"/>
-                            <constraint firstAttribute="centerY" secondItem="aTC-Px-CCa" secondAttribute="centerY" constant="30" id="dPd-Qc-zLe"/>
-                            <constraint firstAttribute="trailing" secondItem="waO-3h-p3X" secondAttribute="trailing" id="fWz-0A-a1h"/>
-                            <constraint firstItem="waO-3h-p3X" firstAttribute="top" secondItem="PtG-Ul-SRN" secondAttribute="top" id="h8k-dO-4iX"/>
-                            <constraint firstItem="QGe-VC-AVO" firstAttribute="top" secondItem="39f-Ve-8OD" secondAttribute="bottom" constant="75" id="hsP-cQ-enl"/>
-                            <constraint firstAttribute="centerX" secondItem="aTC-Px-CCa" secondAttribute="centerX" constant="80" id="pPx-TO-GcH"/>
-                            <constraint firstAttribute="centerX" secondItem="39f-Ve-8OD" secondAttribute="centerX" constant="-80" id="qKc-RT-9BA"/>
+                            <constraint firstAttribute="centerX" secondItem="HAk-QU-4Ze" secondAttribute="centerX" id="Smd-om-tr2"/>
+                            <constraint firstAttribute="centerY" secondItem="HAk-QU-4Ze" secondAttribute="centerY" id="eqN-eH-PzU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -99,8 +115,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="left_eye" width="22" height="71"/>
-        <image name="mouth_smile" width="174" height="54"/>
-        <image name="right_eye" width="22" height="71"/>
+        <image name="face" width="302" height="302"/>
+        <image name="happy_left_eye" width="66" height="66"/>
+        <image name="happy_mouth" width="154" height="85"/>
+        <image name="happy_right_eye" width="66" height="66"/>
     </resources>
 </document>
