@@ -34,18 +34,20 @@ class FairyDishViewController: UIViewController {
     
     deinit{
         blinkTimer?.invalidate()
+        speakingTimer?.invalidate()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.manager.delegate = self
-        
         self.manager.calibrate()
         
+        startBlink()
+        
+        /** TODO:　機能テスト用 実装完了後取り除く  */
         FairyPlayerManager.playFairyAudio()
         toGrad()
-        setBlinkTimer()
         
         startSpeaking()
         let delay = 20 * Double(NSEC_PER_SEC)
@@ -53,15 +55,11 @@ class FairyDishViewController: UIViewController {
         dispatch_after(time, dispatch_get_main_queue(), {
             self.stopSpeaking()
         })
-        
+        /** ここまで取り除く */
         
     }
     
-    private func setBlinkTimer(){
-        blinkTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("blink"), userInfo: nil, repeats: true)
-    }
-    
-    
+    //ノーマルの感情表現切り替え
     //喜
     private func toGrad(){
         toNormal()
@@ -129,8 +127,52 @@ class FairyDishViewController: UIViewController {
         mouth.image = UIImage(named: normal["mouth"]!)
     }
     
+
+    //for Eye
+    private func startBlink(){
+        blinkTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("blink"), userInfo: nil, repeats: true)
+    }
+    
+    //to blink mode
+    func blink(){
+        rightEye.image = UIImage(named: blinkEyes["rightEye"]!)
+        leftEye.image = UIImage(named: blinkEyes["leftEye"]!)
+        
+        //after 0.2sec to emotion state
+        let delay = 0.2 * Double(NSEC_PER_SEC)
+        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            self.changeEmotionEye(self.emotion)
+        })
+    }
     
     //for Eye
+    //目だけ感情表現を戻す。
+    private func changeEmotionEye(emotion: EMOTIONS){
+        switch(emotion)
+        {
+        case .normal:
+            self.toNormalEye()
+            break
+        case .glad:
+            self.toGradEye()
+            break
+        case .anger:
+            self.toAngerEye()
+            break
+        case .happy:
+            self.toHappyEye()
+            break
+        case .sad:
+            self.toSadEye()
+            break
+        default:
+            self.toNormalEye()
+            break
+        }
+    }
+    
+    
     //喜
     private func toGradEye(){
         emotion = EMOTIONS.glad
@@ -157,7 +199,7 @@ class FairyDishViewController: UIViewController {
         emotion = EMOTIONS.happy
         rightEye.image = UIImage(named: happy["rightEye"]!)
         leftEye.image = UIImage(named: happy["leftEye"]!)
-
+        
     }
     
     // 通常
@@ -169,6 +211,32 @@ class FairyDishViewController: UIViewController {
     }
     
     //for Mouth
+    
+    //口だけ感情表現を戻す。
+    private func changeEmotionMouth(emotion: EMOTIONS){
+        switch(emotion)
+        {
+        case .normal:
+            self.toNormalMouth()
+            break
+        case .glad:
+            self.toGradMouth()
+            break
+        case .anger:
+            self.toAngerMouth()
+            break
+        case .happy:
+            self.toHappyMouth()
+            break
+        case .sad:
+            self.toSadMouth()
+            break
+        default:
+            self.toNormalMouth()
+            break
+        }
+    }
+    
     //喜
     private func toGradMouth(){
         emotion = EMOTIONS.glad
@@ -200,22 +268,6 @@ class FairyDishViewController: UIViewController {
         mouth.image = UIImage(named: normal["mouth"]!)
     }
     
-    
-    //to blink mode
-    func blink(){
-        rightEye.image = UIImage(named: blinkEyes["rightEye"]!)
-        leftEye.image = UIImage(named: blinkEyes["leftEye"]!)
-
-        //after 0.2sec to emotion state
-        let delay = 0.2 * Double(NSEC_PER_SEC)
-        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        dispatch_after(time, dispatch_get_main_queue(), {
-            self.changeEmotionEye(self.emotion)
-        })
-    }
-    
-
-    
     // タイマー走らせて口パクパク
     private func startSpeaking(){
         speakingTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("speaking"), userInfo: nil, repeats: true)
@@ -233,58 +285,10 @@ class FairyDishViewController: UIViewController {
         })
     }
     
-    //口パクパクを修正
+    //口パクパクを終了
     private func stopSpeaking(){
         speakingTimer?.invalidate()
         self.changeEmotion(self.emotion)
-    }
-    
-    
-    private func changeEmotionEye(emotion: EMOTIONS){
-        switch(emotion)
-        {
-        case .normal:
-            self.toNormalEye()
-            break
-        case .glad:
-            self.toGradEye()
-            break
-        case .anger:
-            self.toAngerEye()
-            break
-        case .happy:
-            self.toHappyEye()
-            break
-        case .sad:
-            self.toSadEye()
-            break
-        default:
-            self.toNormalEye()
-            break
-        }
-    }
-    private func changeEmotionMouth(emotion: EMOTIONS){
-        switch(emotion)
-        {
-        case .normal:
-            self.toNormalMouth()
-            break
-        case .glad:
-            self.toGradMouth()
-            break
-        case .anger:
-            self.toAngerMouth()
-            break
-        case .happy:
-            self.toHappyMouth()
-            break
-        case .sad:
-            self.toSadMouth()
-            break
-        default:
-            self.toNormalMouth()
-            break
-        }
     }
     
 }
