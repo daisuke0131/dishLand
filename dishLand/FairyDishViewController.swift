@@ -29,7 +29,7 @@ class FairyDishViewController: UIViewController {
     
     let blinkEyes = ["rightEye":"blink_right_eye","leftEye":"blink_left_eye"]
     let talkingMouth = ["mouth":"talking_mouth"]
-    private var manager : EmotionManager! = EmotionManager.instance
+    private var manager : EmotionManager? = EmotionManager.instance
     
     var blinkTimer:NSTimer?
     var speakingTimer:NSTimer?
@@ -38,13 +38,14 @@ class FairyDishViewController: UIViewController {
     deinit{
         blinkTimer?.invalidate()
         speakingTimer?.invalidate()
+        manager = nil
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.manager.delegate = self
-        self.manager.calibrate()
+        self.manager?.delegate = self
+        self.manager?.calibrate()
         
         startBlink()
         FairyPlayerManager.delegate = self
