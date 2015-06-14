@@ -51,13 +51,6 @@ class FairyDishViewController: UIViewController {
         self.manager?.calibrate()
         
         startBlink()
-        
-        self.goodDrink()
-        self.goodDrink()
-//        self.goodDrink()
-//        self.goodDrink()
-//        self.goodDrink()
-//        self.goodDrink()
     }
     
     
