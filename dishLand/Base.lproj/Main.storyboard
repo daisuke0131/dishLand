@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhS-uz-XdN">
-                                <rect key="frame" x="177" y="498" width="247" height="57"/>
+                                <rect key="frame" x="177" y="481" width="247" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="247" id="NEO-R2-CdU"/>
                                     <constraint firstAttribute="height" constant="57" id="dae-Qi-1fw"/>
@@ -71,14 +71,14 @@
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="face_okan" translatesAutoresizingMaskIntoConstraints="NO" id="PDa-P4-Sb6">
-                                <rect key="frame" x="177" y="184" width="247" height="247"/>
+                                <rect key="frame" x="177" y="177" width="247" height="247"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="247" id="F0H-XA-x0c"/>
                                     <constraint firstAttribute="width" constant="247" id="c2V-hm-r02"/>
                                 </constraints>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="title_okan" translatesAutoresizingMaskIntoConstraints="NO" id="TxK-e9-27T">
-                                <rect key="frame" x="163" y="60" width="274" height="72"/>
+                                <rect key="frame" x="163" y="63" width="274" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="Nt9-7E-cl5"/>
                                     <constraint firstAttribute="width" constant="274" id="Z5T-DF-R0Z"/>
@@ -86,10 +86,10 @@
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="TxK-e9-27T" firstAttribute="top" secondItem="wLc-WH-keu" secondAttribute="bottom" constant="40" id="0qG-AK-OHc"/>
                             <constraint firstAttribute="centerX" secondItem="TxK-e9-27T" secondAttribute="centerX" id="3sb-iR-B6A"/>
-                            <constraint firstItem="PDa-P4-Sb6" firstAttribute="top" secondItem="TxK-e9-27T" secondAttribute="bottom" constant="52" id="ALq-7v-m5t"/>
-                            <constraint firstItem="EhS-uz-XdN" firstAttribute="top" secondItem="PDa-P4-Sb6" secondAttribute="bottom" constant="67" id="AR8-4t-Vnv"/>
+                            <constraint firstItem="PDa-P4-Sb6" firstAttribute="top" secondItem="TxK-e9-27T" secondAttribute="bottom" constant="42" id="ALq-7v-m5t"/>
+                            <constraint firstItem="EhS-uz-XdN" firstAttribute="top" secondItem="PDa-P4-Sb6" secondAttribute="bottom" constant="57" id="AR8-4t-Vnv"/>
+                            <constraint firstAttribute="centerY" secondItem="PDa-P4-Sb6" secondAttribute="centerY" id="d8b-Fv-dC0"/>
                             <constraint firstAttribute="centerX" secondItem="PDa-P4-Sb6" secondAttribute="centerX" id="izs-fw-7B7"/>
                             <constraint firstAttribute="centerX" secondItem="EhS-uz-XdN" secondAttribute="centerX" id="n9F-6A-bxu"/>
                         </constraints>
