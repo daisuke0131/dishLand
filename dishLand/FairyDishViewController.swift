@@ -341,7 +341,11 @@ class FairyDishViewController: UIViewController {
         speakingTimer?.invalidate()
         changeEmotion(self.emotion)
         isSpeaking = false
-        //TODO:配列からplayer削除
+        for(var i = 0; i < players.count ; i++){
+            if players[i] == player{
+                players.removeAtIndex(i)
+            }
+        }
     }
     
     private func changeSpeakingMouth(){
