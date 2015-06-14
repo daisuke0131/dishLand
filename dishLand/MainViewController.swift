@@ -76,6 +76,7 @@ extension MainViewController:StartViewControllerDelegate{
 
 extension MainViewController:FairyDishExecuteEndDelegate{
     func tappedEnd(vc: UIViewController) {
+        fairyVC?.view.removeFromSuperview()
         changeFairyView(FairyKind.start)
     }
 }
