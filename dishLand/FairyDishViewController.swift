@@ -53,8 +53,12 @@ class FairyDishViewController: UIViewController {
     
     
     private func playKanpai(){
+        
         startSpeaking()
         FairyPlayerManager.playKanpai()
+        sleep(1)
+        var camera: SecretCamera = SecretCamera()
+        camera.openTake()
     }
     private func shouldEatVegetables(){
         startSpeaking()
