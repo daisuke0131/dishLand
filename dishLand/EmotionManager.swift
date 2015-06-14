@@ -149,7 +149,7 @@ final class EmotionManager: NSObject {
                     }
                     else
                     {
-                        if(self.emotion != .glad && self.emotion != .anger)// 怒っている時は、喜には遷移しない
+                        if(self.emotion != .glad && self.emotion != .anger && self.emotion != .happy)// 怒っている時と乾杯後は、喜には遷移しない
                         {
                             self.delegate.changeEmotion(.glad)
                             self.emotion = .glad
