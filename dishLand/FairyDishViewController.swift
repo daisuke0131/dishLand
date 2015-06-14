@@ -28,10 +28,12 @@ class FairyDishViewController: UIViewController {
     let normal = ["rightEye": "blink_right_eye", "leftEye":"blink_left_eye","mouth":"close_mouth"]
     
     let blinkEyes = ["rightEye":"blink_right_eye","leftEye":"blink_left_eye"]
+    let talkingMouth = ["mouth":"talking_mouth"]
     private var manager : EmotionManager! = EmotionManager.instance
     
     var blinkTimer:NSTimer?
     var speakingTimer:NSTimer?
+    var mouthClosed:Bool = false
     
     deinit{
         blinkTimer?.invalidate()
@@ -271,25 +273,34 @@ class FairyDishViewController: UIViewController {
     
     // タイマー走らせて口パクパク
     private func startSpeaking(){
-        speakingTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("speaking"), userInfo: nil, repeats: true)
+        speakingTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: Selector("speaking"), userInfo: nil, repeats: true)
+        
+        // 最初は口を開ける
+        mouth.image = UIImage(named: talkingMouth["mouth"]!)
+        mouthClosed = false
     }
     
     //to speaking mode
     func speaking(){
-        mouth.image = UIImage(named: normal["mouth"]!)
-        
         //after 0.2sec to emotion state
-        let delay = 0.2 * Double(NSEC_PER_SEC)
-        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        dispatch_after(time, dispatch_get_main_queue(), {
-            self.changeEmotionMouth(self.emotion)
-        })
+        changeSpeakingMouth()
     }
     
     //口パクパクを終了
     private func stopSpeaking(){
         speakingTimer?.invalidate()
         self.changeEmotion(self.emotion)
+    }
+    
+    private func changeSpeakingMouth(){
+        if mouthClosed{
+            // open mouth
+            mouth.image = UIImage(named: talkingMouth["mouth"]!)
+            mouthClosed = false
+        }else{
+            mouth.image = UIImage(named: normal["mouth"]!)
+            mouthClosed = true
+        }
     }
     
     
