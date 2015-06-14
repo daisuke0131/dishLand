@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IAd-MS-eeP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="PsR-VG-ndp">
-            <objects>
-                <navigationController id="IAd-MS-eeP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r4Y-fv-pQv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="xAz-1a-drA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wjd-ow-W6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-647" y="161"/>
-        </scene>
         <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -32,14 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="e0N-x7-1fM">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFY-80-3VA">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RFY-80-3VA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0S7-hX-cRf"/>
+                            <constraint firstAttribute="trailing" secondItem="e0N-x7-1fM" secondAttribute="trailing" id="48p-G7-L7r"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="e0N-x7-1fM" secondAttribute="bottom" id="EAx-Pw-Td5"/>
+                            <constraint firstItem="e0N-x7-1fM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Jil-pq-9n4"/>
+                            <constraint firstItem="e0N-x7-1fM" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="KHh-bi-5Mc"/>
                             <constraint firstAttribute="trailing" secondItem="RFY-80-3VA" secondAttribute="trailing" id="Uz8-yV-6kq"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="RFY-80-3VA" secondAttribute="bottom" id="geu-1r-bbV"/>
                             <constraint firstItem="RFY-80-3VA" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="vQq-BF-iXB"/>
@@ -94,7 +85,6 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TxK-e9-27T" firstAttribute="top" secondItem="wLc-WH-keu" secondAttribute="bottom" constant="40" id="0qG-AK-OHc"/>
                             <constraint firstAttribute="centerX" secondItem="TxK-e9-27T" secondAttribute="centerX" id="3sb-iR-B6A"/>
@@ -170,7 +160,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="HAk-QU-4Ze" secondAttribute="centerX" id="Smd-om-tr2"/>
                             <constraint firstAttribute="centerY" secondItem="HAk-QU-4Ze" secondAttribute="centerY" id="eqN-eH-PzU"/>
@@ -188,8 +177,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="414" height="736"/>
         <image name="btn_start" width="248" height="62"/>
-        <image name="face" width="301" height="301"/>
+        <image name="face" width="308" height="308"/>
         <image name="face_okan" width="247" height="247"/>
         <image name="happy_left_eye" width="66" height="66"/>
         <image name="happy_mouth" width="154" height="85"/>

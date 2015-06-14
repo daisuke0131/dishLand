@@ -50,7 +50,12 @@ class MainViewController: UIViewController {
             containerView.addSubview(fairyVC!.view)
         case FairyKind.fairy1:
             fairyVC = storyboard!.instantiateViewControllerWithIdentifier("fairy") as? FairyDishViewController
-            navigationController?.pushViewController(fairyVC!, animated: true)
+            self.addChildViewController(fairyVC!)
+            fairyVC!.didMoveToParentViewController(self)
+            fairyVC!.view.frame = view.frame
+            containerView.addSubview(fairyVC!.view)
+//            fairyVC = storyboard!.instantiateViewControllerWithIdentifier("fairy") as? FairyDishViewController
+//            navigationController?.pushViewController(fairyVC!, animated: true)
         case FairyKind.fairy2:
             break;
         }
