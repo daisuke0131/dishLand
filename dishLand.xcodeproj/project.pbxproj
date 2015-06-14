@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		401507B91B2C096E005489B1 /* EmotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401507B81B2C096E005489B1 /* EmotionManager.swift */; };
+		40F8901E1B2D096300FFA3C2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F8901D1B2D096300FFA3C2 /* InterfaceController.swift */; };
+		40F890201B2D096300FFA3C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F8901F1B2D096300FFA3C2 /* Images.xcassets */; };
+		40F890241B2D096300FFA3C2 /* dishLand WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 40F890231B2D096300FFA3C2 /* dishLand WatchKit App.app */; };
+		40F8902C1B2D096300FFA3C2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F8902A1B2D096300FFA3C2 /* Interface.storyboard */; };
+		40F8902E1B2D096300FFA3C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F8902D1B2D096300FFA3C2 /* Images.xcassets */; };
+		40F890311B2D096300FFA3C2 /* dishLand WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 40F890191B2D096300FFA3C2 /* dishLand WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7E509FD01B2BF5C40010053A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FCF1B2BF5C40010053A /* AppDelegate.swift */; };
 		7E509FD21B2BF5C40010053A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FD11B2BF5C40010053A /* MainViewController.swift */; };
 		7E509FD51B2BF5C40010053A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E509FD31B2BF5C40010053A /* Main.storyboard */; };
@@ -27,6 +33,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		40F890251B2D096300FFA3C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E509FC21B2BF5C30010053A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40F890221B2D096300FFA3C2;
+			remoteInfo = "dishLand WatchKit App";
+		};
+		40F8902F1B2D096300FFA3C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E509FC21B2BF5C30010053A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40F890181B2D096300FFA3C2;
+			remoteInfo = "dishLand WatchKit Extension";
+		};
 		7E509FE01B2BF5C40010053A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7E509FC21B2BF5C30010053A /* Project object */;
@@ -36,8 +56,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		40F890381B2D096300FFA3C2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				40F890311B2D096300FFA3C2 /* dishLand WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		401507B81B2C096E005489B1 /* EmotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionManager.swift; sourceTree = "<group>"; };
+		40F890191B2D096300FFA3C2 /* dishLand WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "dishLand WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F8901C1B2D096300FFA3C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40F8901D1B2D096300FFA3C2 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		40F8901F1B2D096300FFA3C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		40F890231B2D096300FFA3C2 /* dishLand WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dishLand WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40F890291B2D096300FFA3C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40F8902B1B2D096300FFA3C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		40F8902D1B2D096300FFA3C2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7E509FCA1B2BF5C40010053A /* dishLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dishLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E509FCE1B2BF5C40010053A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E509FCF1B2BF5C40010053A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +103,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		40F890161B2D096300FFA3C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E509FC71B2BF5C40010053A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,11 +127,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40F8901A1B2D096300FFA3C2 /* dishLand WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				40F8901D1B2D096300FFA3C2 /* InterfaceController.swift */,
+				40F8901F1B2D096300FFA3C2 /* Images.xcassets */,
+				40F8901B1B2D096300FFA3C2 /* Supporting Files */,
+			);
+			path = "dishLand WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		40F8901B1B2D096300FFA3C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				40F8901C1B2D096300FFA3C2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		40F890271B2D096300FFA3C2 /* dishLand WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				40F8902A1B2D096300FFA3C2 /* Interface.storyboard */,
+				40F8902D1B2D096300FFA3C2 /* Images.xcassets */,
+				40F890281B2D096300FFA3C2 /* Supporting Files */,
+			);
+			path = "dishLand WatchKit App";
+			sourceTree = "<group>";
+		};
+		40F890281B2D096300FFA3C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				40F890291B2D096300FFA3C2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		7E509FC11B2BF5C30010053A = {
 			isa = PBXGroup;
 			children = (
 				7E509FCC1B2BF5C40010053A /* dishLand */,
 				7E509FE21B2BF5C40010053A /* dishLandTests */,
+				40F8901A1B2D096300FFA3C2 /* dishLand WatchKit Extension */,
+				40F890271B2D096300FFA3C2 /* dishLand WatchKit App */,
 				7E509FCB1B2BF5C40010053A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +179,8 @@
 			children = (
 				7E509FCA1B2BF5C40010053A /* dishLand.app */,
 				7E509FDF1B2BF5C40010053A /* dishLandTests.xctest */,
+				40F890191B2D096300FFA3C2 /* dishLand WatchKit Extension.appex */,
+				40F890231B2D096300FFA3C2 /* dishLand WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +245,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		40F890181B2D096300FFA3C2 /* dishLand WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F890371B2D096300FFA3C2 /* Build configuration list for PBXNativeTarget "dishLand WatchKit Extension" */;
+			buildPhases = (
+				40F890151B2D096300FFA3C2 /* Sources */,
+				40F890161B2D096300FFA3C2 /* Frameworks */,
+				40F890171B2D096300FFA3C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40F890261B2D096300FFA3C2 /* PBXTargetDependency */,
+			);
+			name = "dishLand WatchKit Extension";
+			productName = "dishLand WatchKit Extension";
+			productReference = 40F890191B2D096300FFA3C2 /* dishLand WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		40F890221B2D096300FFA3C2 /* dishLand WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40F890361B2D096300FFA3C2 /* Build configuration list for PBXNativeTarget "dishLand WatchKit App" */;
+			buildPhases = (
+				40F890211B2D096300FFA3C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "dishLand WatchKit App";
+			productName = "dishLand WatchKit App";
+			productReference = 40F890231B2D096300FFA3C2 /* dishLand WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		7E509FC91B2BF5C40010053A /* dishLand */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E509FE91B2BF5C40010053A /* Build configuration list for PBXNativeTarget "dishLand" */;
@@ -163,10 +285,12 @@
 				7E509FC61B2BF5C40010053A /* Sources */,
 				7E509FC71B2BF5C40010053A /* Frameworks */,
 				7E509FC81B2BF5C40010053A /* Resources */,
+				40F890381B2D096300FFA3C2 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				40F890301B2D096300FFA3C2 /* PBXTargetDependency */,
 			);
 			name = dishLand;
 			productName = dishLand;
@@ -200,6 +324,13 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = daisuke;
 				TargetAttributes = {
+					40F890181B2D096300FFA3C2 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					40F890221B2D096300FFA3C2 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 96A372G96Q;
+					};
 					7E509FC91B2BF5C40010053A = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
@@ -224,11 +355,31 @@
 			targets = (
 				7E509FC91B2BF5C40010053A /* dishLand */,
 				7E509FDE1B2BF5C40010053A /* dishLandTests */,
+				40F890181B2D096300FFA3C2 /* dishLand WatchKit Extension */,
+				40F890221B2D096300FFA3C2 /* dishLand WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		40F890171B2D096300FFA3C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F890201B2D096300FFA3C2 /* Images.xcassets in Resources */,
+				40F890241B2D096300FFA3C2 /* dishLand WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F890211B2D096300FFA3C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F8902C1B2D096300FFA3C2 /* Interface.storyboard in Resources */,
+				40F8902E1B2D096300FFA3C2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E509FC81B2BF5C40010053A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +407,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		40F890151B2D096300FFA3C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40F8901E1B2D096300FFA3C2 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7E509FC61B2BF5C40010053A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +439,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		40F890261B2D096300FFA3C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40F890221B2D096300FFA3C2 /* dishLand WatchKit App */;
+			targetProxy = 40F890251B2D096300FFA3C2 /* PBXContainerItemProxy */;
+		};
+		40F890301B2D096300FFA3C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40F890181B2D096300FFA3C2 /* dishLand WatchKit Extension */;
+			targetProxy = 40F8902F1B2D096300FFA3C2 /* PBXContainerItemProxy */;
+		};
 		7E509FE11B2BF5C40010053A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7E509FC91B2BF5C40010053A /* dishLand */;
@@ -288,6 +457,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		40F8902A1B2D096300FFA3C2 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40F8902B1B2D096300FFA3C2 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		7E509FD31B2BF5C40010053A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -307,6 +484,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		40F890321B2D096300FFA3C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "dishLand WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		40F890331B2D096300FFA3C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "dishLand WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		40F890341B2D096300FFA3C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = dishLand_WatchKit_Extension;
+				INFOPLIST_FILE = "dishLand WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		40F890351B2D096300FFA3C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = dishLand_WatchKit_Extension;
+				INFOPLIST_FILE = "dishLand WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		7E509FE71B2BF5C40010053A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -447,6 +686,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		40F890361B2D096300FFA3C2 /* Build configuration list for PBXNativeTarget "dishLand WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F890341B2D096300FFA3C2 /* Debug */,
+				40F890351B2D096300FFA3C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		40F890371B2D096300FFA3C2 /* Build configuration list for PBXNativeTarget "dishLand WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F890321B2D096300FFA3C2 /* Debug */,
+				40F890331B2D096300FFA3C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		7E509FC51B2BF5C30010053A /* Build configuration list for PBXProject "dishLand" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
