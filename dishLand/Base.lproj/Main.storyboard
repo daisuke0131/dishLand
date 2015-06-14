@@ -164,7 +164,7 @@
                                     <constraint firstAttribute="height" constant="57" id="cd0-LC-XgT"/>
                                     <constraint firstAttribute="width" constant="247" id="sgq-2p-mW1"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="btn_start">
+                                <state key="normal" backgroundImage="btn_finish">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -193,6 +193,7 @@
     </scenes>
     <resources>
         <image name="background" width="414" height="736"/>
+        <image name="btn_finish" width="248" height="62"/>
         <image name="btn_start" width="248" height="62"/>
         <image name="face" width="308" height="308"/>
         <image name="face_okan" width="247" height="247"/>
