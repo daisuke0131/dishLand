@@ -90,7 +90,6 @@ class FairyDishViewController: UIViewController {
             self.rightEye.image = UIImage(named: self.grad["rightEye"]!)
             self.leftEye.image = UIImage(named: self.grad["leftEye"]!)
             self.mouth.image = UIImage(named: self.grad["mouth"]!)
-            self.pleaseKamatte()
         })
     }
     
@@ -105,9 +104,7 @@ class FairyDishViewController: UIViewController {
             self.rightEye.image = UIImage(named:self.anger["rightEye"]!)
             self.leftEye.image = UIImage(named: self.anger["leftEye"]!)
             self.mouth.image = UIImage(named: self.anger["mouth"]!)
-            self.drinkHighPace()
         })
-
     }
 
     //哀
@@ -122,7 +119,6 @@ class FairyDishViewController: UIViewController {
             self.rightEye.image = UIImage(named: self.sad["rightEye"]!)
             self.leftEye.image = UIImage(named: self.sad["leftEye"]!)
             self.mouth.image = UIImage(named: self.sad["mouth"]!)
-            self.pleaseWatchPhoto()
         })
     }
     
@@ -137,7 +133,6 @@ class FairyDishViewController: UIViewController {
             self.rightEye.image = UIImage(named: self.happy["rightEye"]!)
             self.leftEye.image = UIImage(named: self.happy["leftEye"]!)
             self.mouth.image = UIImage(named: self.happy["mouth"]!)
-            self.playKanpai()
         })
     }
     
@@ -373,14 +368,13 @@ extension FairyDishViewController:EmotionManagerDelegate{
             println("sad")
             break
         case .superSad:
-            // かまってー!!
-            //prinln("superSad")
+            self.pleaseKamatte()
             break
         case .cheers:
-            // かんぱーい!!
+            self.playKanpai()
             break
         case .goodDrink:
-            // 良い飲みっぷり!!
+            self.goodDrink()
             break
         default:
             self.toNormal()
