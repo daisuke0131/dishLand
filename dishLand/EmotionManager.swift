@@ -18,10 +18,12 @@ enum EMOTIONS {
     case sad // 哀
     case happy // 楽
     
-    // 話すだけ
+    // 話す
     case cheers //かんぱ〜い
-    case superSad //超かなし〜
+    case sadSpeech // 野菜（new!）
+    case superSad //かまって
     case goodDrink // 良い飲みっぷりですな！
+    case tooDrink // 飲みすぎ!（new!）
 }
 
 protocol EmotionManagerDelegate{
@@ -143,6 +145,7 @@ final class EmotionManager: NSObject {
                     if(self.drinkCount > 50)
                     {
                         self.delegate.changeEmotion(.anger)
+                        self.delegate.changeEmotion(.tooDrink)
                         self.emotion = .anger
                         self.drinkCount = 0
                         self.counterMilSec = 0
@@ -152,6 +155,7 @@ final class EmotionManager: NSObject {
                         if(self.emotion != .glad && self.emotion != .anger && self.emotion != .happy)// 怒っている時と乾杯後は、喜には遷移しない
                         {
                             self.delegate.changeEmotion(.glad)
+                            self.delegate.changeEmotion(.goodDrink)
                             self.emotion = .glad
                             self.counterMilSec = 0
                         }
@@ -204,6 +208,7 @@ final class EmotionManager: NSObject {
         if(self.counterMilSec > self.waitingTime)
         {
             self.delegate.changeEmotion(.sad)
+            self.delegate.changeEmotion(.sadSpeech)
             self.emotion = .sad
             self.counterMilSec = 0
         }
@@ -224,6 +229,7 @@ final class EmotionManager: NSObject {
         if(self.counterMilSec == 0)
         {
             self.delegate.changeEmotion(.glad)
+            self.delegate.changeEmotion(.goodDrink)
             self.emotion = .glad
             self.counterMilSec = 0
         }
