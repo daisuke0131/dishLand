@@ -47,19 +47,35 @@ class FairyDishViewController: UIViewController {
         self.manager.calibrate()
         
         startBlink()
-        
-        /** TODO:　機能テスト用 実装完了後取り除く  */
-        FairyPlayerManager.playFairyAudio()
-        toGrad()
-        
+        FairyPlayerManager.delegate = self
+    }
+    
+    
+    private func playKanpai(){
         startSpeaking()
-        let delay = 20 * Double(NSEC_PER_SEC)
-        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        dispatch_after(time, dispatch_get_main_queue(), {
-            self.stopSpeaking()
-        })
-        /** ここまで取り除く */
-        
+        FairyPlayerManager.playKanpai()
+    }
+    private func shouldEatVegetables(){
+        startSpeaking()
+        FairyPlayerManager.playShouldEatVegetables()
+    }
+    private func pleaseWatchPhoto(){
+        startSpeaking()
+        FairyPlayerManager.playPleaseWatchPhoto()
+    }
+    private func pleaseKamatte(){
+        startSpeaking()
+        FairyPlayerManager.playPleaseKamatte()
+    }
+    
+    private func goodDrink(){
+        startSpeaking()
+        FairyPlayerManager.playGoodDrink()
+    }
+    
+    private func drinkHighPace(){
+        startSpeaking()
+        FairyPlayerManager.playKanpai()
     }
     
     //ノーマルの感情表現切り替え
@@ -74,6 +90,7 @@ class FairyDishViewController: UIViewController {
             self.rightEye.image = UIImage(named: self.grad["rightEye"]!)
             self.leftEye.image = UIImage(named: self.grad["leftEye"]!)
             self.mouth.image = UIImage(named: self.grad["mouth"]!)
+            self.pleaseKamatte()
         })
     }
     
@@ -88,6 +105,7 @@ class FairyDishViewController: UIViewController {
             self.rightEye.image = UIImage(named:self.anger["rightEye"]!)
             self.leftEye.image = UIImage(named: self.anger["leftEye"]!)
             self.mouth.image = UIImage(named: self.anger["mouth"]!)
+            self.drinkHighPace()
         })
 
     }
@@ -104,6 +122,7 @@ class FairyDishViewController: UIViewController {
             self.rightEye.image = UIImage(named: self.sad["rightEye"]!)
             self.leftEye.image = UIImage(named: self.sad["leftEye"]!)
             self.mouth.image = UIImage(named: self.sad["mouth"]!)
+            self.pleaseWatchPhoto()
         })
     }
     
@@ -118,6 +137,7 @@ class FairyDishViewController: UIViewController {
             self.rightEye.image = UIImage(named: self.happy["rightEye"]!)
             self.leftEye.image = UIImage(named: self.happy["leftEye"]!)
             self.mouth.image = UIImage(named: self.happy["mouth"]!)
+            self.playKanpai()
         })
     }
     
@@ -314,6 +334,12 @@ class FairyDishViewController: UIViewController {
 
 protocol FairyDishExecuteEndDelegate{
     func tappedEnd(vc:UIViewController)
+}
+
+extension FairyDishViewController:FairyPlayerManagerDelegate{
+    func endSpeaking() {
+        stopSpeaking()
+    }
 }
 
 

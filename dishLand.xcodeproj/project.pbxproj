@@ -22,14 +22,13 @@
 		7E509FE61B2BF5C40010053A /* dishLandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FE51B2BF5C40010053A /* dishLandTests.swift */; };
 		7E509FF01B2BFDC30010053A /* FairyDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E509FEF1B2BFDC30010053A /* FairyDishViewController.swift */; };
 		7E7EF9291B2C15E80096BD4C /* FairyPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EF9281B2C15E80096BD4C /* FairyPlayerManager.swift */; };
-		7E7EF9311B2C199A0096BD4C /* eiyo_tottenno.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92A1B2C199A0096BD4C /* eiyo_tottenno.wav */; };
-		7E7EF9321B2C199A0096BD4C /* kanpai.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92B1B2C199A0096BD4C /* kanpai.wav */; };
-		7E7EF9331B2C199A0096BD4C /* nakayoku_site.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92C1B2C199A0096BD4C /* nakayoku_site.wav */; };
-		7E7EF9341B2C199A0096BD4C /* nomuno_hayai.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92D1B2C199A0096BD4C /* nomuno_hayai.wav */; };
-		7E7EF9351B2C199A0096BD4C /* syasin_totta.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92E1B2C199A0096BD4C /* syasin_totta.wav */; };
-		7E7EF9361B2C199A0096BD4C /* totta_syasin_dayo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF92F1B2C199A0096BD4C /* totta_syasin_dayo.wav */; };
-		7E7EF9371B2C199A0096BD4C /* yasai_tonnakya.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E7EF9301B2C199A0096BD4C /* yasai_tonnakya.wav */; };
 		7E7EF93A1B2C39810096BD4C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EF9391B2C39810096BD4C /* StartViewController.swift */; };
+		7EA432041B2D1F93000BC80F /* 1-kanpai.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EA431FE1B2D1F93000BC80F /* 1-kanpai.wav */; };
+		7EA432051B2D1F93000BC80F /* 2-yasai_tabete.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EA431FF1B2D1F93000BC80F /* 2-yasai_tabete.wav */; };
+		7EA432061B2D1F93000BC80F /* 3-a-syasin_mite.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EA432001B2D1F93000BC80F /* 3-a-syasin_mite.wav */; };
+		7EA432071B2D1F93000BC80F /* 4-b-kamatte.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EA432011B2D1F93000BC80F /* 4-b-kamatte.wav */; };
+		7EA432081B2D1F93000BC80F /* 5-nomippuri.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EA432021B2D1F93000BC80F /* 5-nomippuri.wav */; };
+		7EA432091B2D1F93000BC80F /* 6-peesu_hayai.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7EA432031B2D1F93000BC80F /* 6-peesu_hayai.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,14 +91,13 @@
 		7E509FE51B2BF5C40010053A /* dishLandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dishLandTests.swift; sourceTree = "<group>"; };
 		7E509FEF1B2BFDC30010053A /* FairyDishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyDishViewController.swift; sourceTree = "<group>"; };
 		7E7EF9281B2C15E80096BD4C /* FairyPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FairyPlayerManager.swift; sourceTree = "<group>"; };
-		7E7EF92A1B2C199A0096BD4C /* eiyo_tottenno.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eiyo_tottenno.wav; sourceTree = "<group>"; };
-		7E7EF92B1B2C199A0096BD4C /* kanpai.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kanpai.wav; sourceTree = "<group>"; };
-		7E7EF92C1B2C199A0096BD4C /* nakayoku_site.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nakayoku_site.wav; sourceTree = "<group>"; };
-		7E7EF92D1B2C199A0096BD4C /* nomuno_hayai.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nomuno_hayai.wav; sourceTree = "<group>"; };
-		7E7EF92E1B2C199A0096BD4C /* syasin_totta.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = syasin_totta.wav; sourceTree = "<group>"; };
-		7E7EF92F1B2C199A0096BD4C /* totta_syasin_dayo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = totta_syasin_dayo.wav; sourceTree = "<group>"; };
-		7E7EF9301B2C199A0096BD4C /* yasai_tonnakya.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yasai_tonnakya.wav; sourceTree = "<group>"; };
 		7E7EF9391B2C39810096BD4C /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		7EA431FE1B2D1F93000BC80F /* 1-kanpai.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "1-kanpai.wav"; sourceTree = "<group>"; };
+		7EA431FF1B2D1F93000BC80F /* 2-yasai_tabete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "2-yasai_tabete.wav"; sourceTree = "<group>"; };
+		7EA432001B2D1F93000BC80F /* 3-a-syasin_mite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "3-a-syasin_mite.wav"; sourceTree = "<group>"; };
+		7EA432011B2D1F93000BC80F /* 4-b-kamatte.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "4-b-kamatte.wav"; sourceTree = "<group>"; };
+		7EA432021B2D1F93000BC80F /* 5-nomippuri.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "5-nomippuri.wav"; sourceTree = "<group>"; };
+		7EA432031B2D1F93000BC80F /* 6-peesu_hayai.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "6-peesu_hayai.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,13 +229,12 @@
 		7E7EF9381B2C19A90096BD4C /* fairyAudios */ = {
 			isa = PBXGroup;
 			children = (
-				7E7EF92A1B2C199A0096BD4C /* eiyo_tottenno.wav */,
-				7E7EF92B1B2C199A0096BD4C /* kanpai.wav */,
-				7E7EF92C1B2C199A0096BD4C /* nakayoku_site.wav */,
-				7E7EF92D1B2C199A0096BD4C /* nomuno_hayai.wav */,
-				7E7EF92E1B2C199A0096BD4C /* syasin_totta.wav */,
-				7E7EF92F1B2C199A0096BD4C /* totta_syasin_dayo.wav */,
-				7E7EF9301B2C199A0096BD4C /* yasai_tonnakya.wav */,
+				7EA431FE1B2D1F93000BC80F /* 1-kanpai.wav */,
+				7EA431FF1B2D1F93000BC80F /* 2-yasai_tabete.wav */,
+				7EA432001B2D1F93000BC80F /* 3-a-syasin_mite.wav */,
+				7EA432011B2D1F93000BC80F /* 4-b-kamatte.wav */,
+				7EA432021B2D1F93000BC80F /* 5-nomippuri.wav */,
+				7EA432031B2D1F93000BC80F /* 6-peesu_hayai.wav */,
 			);
 			name = fairyAudios;
 			sourceTree = "<group>";
@@ -385,15 +382,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E509FD51B2BF5C40010053A /* Main.storyboard in Resources */,
-				7E7EF9321B2C199A0096BD4C /* kanpai.wav in Resources */,
-				7E7EF9331B2C199A0096BD4C /* nakayoku_site.wav in Resources */,
-				7E7EF9311B2C199A0096BD4C /* eiyo_tottenno.wav in Resources */,
 				7E509FDA1B2BF5C40010053A /* LaunchScreen.xib in Resources */,
-				7E7EF9371B2C199A0096BD4C /* yasai_tonnakya.wav in Resources */,
-				7E7EF9341B2C199A0096BD4C /* nomuno_hayai.wav in Resources */,
-				7E7EF9361B2C199A0096BD4C /* totta_syasin_dayo.wav in Resources */,
-				7E7EF9351B2C199A0096BD4C /* syasin_totta.wav in Resources */,
+				7EA432051B2D1F93000BC80F /* 2-yasai_tabete.wav in Resources */,
+				7EA432071B2D1F93000BC80F /* 4-b-kamatte.wav in Resources */,
+				7EA432041B2D1F93000BC80F /* 1-kanpai.wav in Resources */,
+				7EA432091B2D1F93000BC80F /* 6-peesu_hayai.wav in Resources */,
+				7EA432061B2D1F93000BC80F /* 3-a-syasin_mite.wav in Resources */,
 				7E509FD71B2BF5C40010053A /* Images.xcassets in Resources */,
+				7EA432081B2D1F93000BC80F /* 5-nomippuri.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +689,7 @@
 				40F890351B2D096300FFA3C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40F890371B2D096300FFA3C2 /* Build configuration list for PBXNativeTarget "dishLand WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -701,6 +698,7 @@
 				40F890331B2D096300FFA3C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E509FC51B2BF5C30010053A /* Build configuration list for PBXProject "dishLand" */ = {
 			isa = XCConfigurationList;
