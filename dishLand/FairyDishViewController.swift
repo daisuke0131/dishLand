@@ -349,37 +349,24 @@ extension FairyDishViewController:EmotionManagerDelegate{
         {
         case .normal:
             self.toNormal()
-            println("normal")
-            break
         case .glad:
             self.toGrad()
-            println("grad")
-            break
         case .anger:
             self.toAnger()
-            println("anger")
-            break
         case .happy:
             self.toHappy()
-            println("happy")
-            break
         case .sad:
             self.toSad()
-            println("sad")
-            break
         case .superSad:
             self.pleaseKamatte()
-            break
         case .cheers:
             self.playKanpai()
-            break
         case .goodDrink:
             self.goodDrink()
-            break
-        default:
-            self.toNormal()
-            println("normal")
-            break
+        case .tooDrink:
+            self.drinkHighPace()
+        case .sadSpeech:
+            self.shouldEatVegetables()
         }
     }
 }
