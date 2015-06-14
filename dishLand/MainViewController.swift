@@ -50,6 +50,7 @@ class MainViewController: UIViewController {
             containerView.addSubview(fairyVC!.view)
         case FairyKind.fairy1:
             fairyVC = storyboard!.instantiateViewControllerWithIdentifier("fairy") as? FairyDishViewController
+            (fairyVC as! FairyDishViewController).delegate = self
             self.addChildViewController(fairyVC!)
             fairyVC!.didMoveToParentViewController(self)
             fairyVC!.view.frame = view.frame
@@ -73,3 +74,8 @@ extension MainViewController:StartViewControllerDelegate{
     }
 }
 
+extension MainViewController:FairyDishExecuteEndDelegate{
+    func tappedEnd(vc: UIViewController) {
+        changeFairyView(FairyKind.start)
+    }
+}

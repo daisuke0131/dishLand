@@ -143,7 +143,6 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="aTC-Px-CCa" firstAttribute="leading" secondItem="QGe-VC-AVO" secondAttribute="leading" id="0IO-bn-jSI"/>
                                     <constraint firstAttribute="trailing" secondItem="waO-3h-p3X" secondAttribute="trailing" id="5uq-ta-PbB"/>
@@ -159,10 +158,26 @@
                                     <constraint firstItem="waO-3h-p3X" firstAttribute="leading" secondItem="HAk-QU-4Ze" secondAttribute="leading" id="yok-3R-sw7"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ve5-WC-Ahx">
+                                <rect key="frame" x="176" y="508" width="247" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="cd0-LC-XgT"/>
+                                    <constraint firstAttribute="width" constant="247" id="sgq-2p-mW1"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="btn_start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedEnd:" destination="jcn-xh-y3B" eventType="touchUpInside" id="kVs-WX-YPE"/>
+                                    <action selector="tappedStart:" destination="HCu-o1-3VG" eventType="touchUpInside" id="S1R-WO-4lU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ve5-WC-Ahx" secondAttribute="centerX" id="7OC-jM-Fkc"/>
                             <constraint firstAttribute="centerX" secondItem="HAk-QU-4Ze" secondAttribute="centerX" id="Smd-om-tr2"/>
                             <constraint firstAttribute="centerY" secondItem="HAk-QU-4Ze" secondAttribute="centerY" id="eqN-eH-PzU"/>
+                            <constraint firstItem="ve5-WC-Ahx" firstAttribute="top" secondItem="HAk-QU-4Ze" secondAttribute="bottom" constant="57" id="vt5-N5-1aQ"/>
                         </constraints>
                     </view>
                     <connections>

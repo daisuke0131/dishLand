@@ -10,6 +10,7 @@ import UIKit
 
 class FairyDishViewController: UIViewController {
     
+    var delegate:FairyDishExecuteEndDelegate?
     
     @IBOutlet weak var rightEye: UIImageView!
     
@@ -291,7 +292,19 @@ class FairyDishViewController: UIViewController {
         self.changeEmotion(self.emotion)
     }
     
+    
+    @IBAction func tappedEnd(sender: AnyObject) {
+        self.delegate?.tappedEnd(self)
+    }
+    
+    
+    
 }
+
+protocol FairyDishExecuteEndDelegate{
+    func tappedEnd(vc:UIViewController)
+}
+
 
 
 extension FairyDishViewController:EmotionManagerDelegate{
