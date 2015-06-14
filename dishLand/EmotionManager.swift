@@ -67,6 +67,8 @@ final class EmotionManager: NSObject {
     
     var drinkCount = 0 //短期間で連続して飲んだ時
     
+    private var gladCount = 0 //いい飲みっぷりを言い過ぎない用
+    
     private override init() {
         super.init()
         
@@ -142,7 +144,7 @@ final class EmotionManager: NSObject {
                 else//次以降は飲んだことに
                 {
                     self.drinkCount = self.drinkCount + 1 //連続で飲んでいるのをkaunto
-                    if(self.drinkCount > 50)
+                    if(self.drinkCount > 70)
                     {
                         self.delegate.changeEmotion(.anger)
                         self.delegate.changeEmotion(.tooDrink)
@@ -152,12 +154,17 @@ final class EmotionManager: NSObject {
                     }
                     else
                     {
-                        if(self.emotion != .glad && self.emotion != .anger && self.emotion != .happy)// 怒っている時と乾杯後は、喜には遷移しない
+                        if(self.emotion != .anger && self.emotion != .happy)// 怒っている時と乾杯後は、喜には遷移しない
                         {
-                            self.delegate.changeEmotion(.glad)
-                            self.delegate.changeEmotion(.goodDrink)
-                            self.emotion = .glad
-                            self.counterMilSec = 0
+                            if(self.gladCount > 20)
+                            {
+                                self.delegate.changeEmotion(.glad)
+                                self.delegate.changeEmotion(.goodDrink)
+                                self.emotion = .glad
+                                self.counterMilSec = 0
+                                self.gladCount = 0
+                            }
+                            self.gladCount = self.gladCount + 1
                         }
                     }
                 }
