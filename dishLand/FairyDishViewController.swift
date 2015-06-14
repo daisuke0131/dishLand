@@ -342,7 +342,7 @@ class FairyDishViewController: UIViewController {
         changeEmotion(self.emotion)
         isSpeaking = false
         for(var i = 0; i < players.count ; i++){
-            if players[i] == player{
+            if players[i] === player{
                 players.removeAtIndex(i)
             }
         }
