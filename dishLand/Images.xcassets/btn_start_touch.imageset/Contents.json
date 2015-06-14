@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "happy_left_eye.png"
+      "filename" : "btn_start_touch.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "happy_left_eye@2x.png"
+      "filename" : "btn_start_touch@2x.png"
     },
     {
       "idiom" : "universal",
