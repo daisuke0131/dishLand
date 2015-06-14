@@ -75,7 +75,7 @@ class FairyDishViewController: UIViewController {
     
     private func drinkHighPace(){
         startSpeaking()
-        FairyPlayerManager.playKanpai()
+        FairyPlayerManager.playDrinkHighPace()
     }
     
     //ノーマルの感情表現切り替え
