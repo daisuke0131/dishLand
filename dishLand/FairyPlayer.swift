@@ -9,42 +9,41 @@
 import UIKit
 import AVFoundation
 
-class FairyPlayerManager: NSObject,AVAudioPlayerDelegate {
+class FairyPlayer: NSObject,AVAudioPlayerDelegate {
     
-    static var delegate:FairyPlayerManagerDelegate?
-   
-    static var sharedInstance = FairyPlayerManager()
+    var delegate:FairyPlayerDelegate?
+    
     var player: AVAudioPlayer?
     
     override init() {
         super.init()
     }
     
-    class func playKanpai(){
-        sharedInstance.playKanpai()
-    }
+//    class func playKanpai(){
+//        sharedInstance.playKanpai()
+//    }
+//    
+//    class func playShouldEatVegetables(){
+//        sharedInstance.playShouldEatVegetables()
+//    }
+//    
+//    class func playPleaseWatchPhoto(){
+//        sharedInstance.playPleaseWatchPhoto()
+//    }
+//    
+//    class func playPleaseKamatte(){
+//        sharedInstance.playPleaseKamatte()
+//    }
+//    
+//    class func playGoodDrink(){
+//        sharedInstance.playGoodDrink()
+//    }
+//    
+//    class func playDrinkHighPace(){
+//        sharedInstance.playDrinkHighPace()
+//    }
     
-    class func playShouldEatVegetables(){
-        sharedInstance.playShouldEatVegetables()
-    }
-    
-    class func playPleaseWatchPhoto(){
-        sharedInstance.playPleaseWatchPhoto()
-    }
-    
-    class func playPleaseKamatte(){
-        sharedInstance.playPleaseKamatte()
-    }
-    
-    class func playGoodDrink(){
-        sharedInstance.playGoodDrink()
-    }
-    
-    class func playDrinkHighPace(){
-        sharedInstance.playDrinkHighPace()
-    }
-    
-    private func playKanpai(){
+    func playKanpai(){
         let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("1-kanpai", ofType: "wav")!)
         
         if let p = AVAudioPlayer(contentsOfURL: audioPath, error: nil){
@@ -54,7 +53,7 @@ class FairyPlayerManager: NSObject,AVAudioPlayerDelegate {
         }
     }
     
-    private func playShouldEatVegetables(){
+    func playShouldEatVegetables(){
         let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("2-yasai_tabete", ofType: "wav")!)
         
         if let p = AVAudioPlayer(contentsOfURL: audioPath, error: nil){
@@ -64,7 +63,7 @@ class FairyPlayerManager: NSObject,AVAudioPlayerDelegate {
         }
         
     }
-    private func playPleaseWatchPhoto(){
+    func playPleaseWatchPhoto(){
         let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("3-a-syasin_mite", ofType: "wav")!)
         
         if let p = AVAudioPlayer(contentsOfURL: audioPath, error: nil){
@@ -74,7 +73,7 @@ class FairyPlayerManager: NSObject,AVAudioPlayerDelegate {
         }
         
     }
-    private func playPleaseKamatte(){
+    func playPleaseKamatte(){
         let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("4-b-kamatte", ofType: "wav")!)
         
         if let p = AVAudioPlayer(contentsOfURL: audioPath, error: nil){
@@ -84,7 +83,7 @@ class FairyPlayerManager: NSObject,AVAudioPlayerDelegate {
         }
     }
     
-    private func playGoodDrink(){
+     func playGoodDrink(){
         let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("5-nomippuri", ofType: "wav")!)
         
         if let p = AVAudioPlayer(contentsOfURL: audioPath, error: nil){
@@ -95,7 +94,7 @@ class FairyPlayerManager: NSObject,AVAudioPlayerDelegate {
         
     }
     
-    private func playDrinkHighPace(){
+    func playDrinkHighPace(){
         let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("6-peesu_hayai", ofType: "wav")!)
         
         if let p = AVAudioPlayer(contentsOfURL: audioPath, error: nil){
@@ -118,10 +117,10 @@ class FairyPlayerManager: NSObject,AVAudioPlayerDelegate {
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
         player.stop()
-        FairyPlayerManager.delegate?.endSpeaking()
+        delegate?.endSpeaking(self)
     }
 }
 
-protocol FairyPlayerManagerDelegate{
-    func endSpeaking()
+protocol FairyPlayerDelegate{
+    func endSpeaking(player:FairyPlayer)
 }

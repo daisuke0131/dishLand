@@ -34,6 +34,9 @@ class FairyDishViewController: UIViewController {
     var blinkTimer:NSTimer?
     var speakingTimer:NSTimer?
     var mouthClosed:Bool = false
+    var isSpeaking:Bool = false
+    
+    var players:[FairyPlayer] = [FairyPlayer]()
     
     deinit{
         blinkTimer?.invalidate()
@@ -48,39 +51,62 @@ class FairyDishViewController: UIViewController {
         self.manager?.calibrate()
         
         startBlink()
-        FairyPlayerManager.delegate = self
+        
+        self.goodDrink()
+        self.goodDrink()
+//        self.goodDrink()
+//        self.goodDrink()
+//        self.goodDrink()
+//        self.goodDrink()
     }
     
     
     private func playKanpai(){
-        
         startSpeaking()
-        FairyPlayerManager.playKanpai()
+        let player =  FairyPlayer()
+        player.delegate = self
+        player.playKanpai()
+        players.append(player)
         sleep(1)
         var camera: SecretCamera = SecretCamera()
         camera.openTake()
     }
     private func shouldEatVegetables(){
         startSpeaking()
-        FairyPlayerManager.playShouldEatVegetables()
+        let player =  FairyPlayer()
+        player.delegate = self
+        player.playShouldEatVegetables()
+        players.append(player)
     }
     private func pleaseWatchPhoto(){
         startSpeaking()
-        FairyPlayerManager.playPleaseWatchPhoto()
+        let player =  FairyPlayer()
+        player.delegate = self
+        player.playPleaseWatchPhoto()
+        players.append(player)
     }
     private func pleaseKamatte(){
         startSpeaking()
-        FairyPlayerManager.playPleaseKamatte()
+        let player =  FairyPlayer()
+        player.delegate = self
+        player.playPleaseKamatte()
+        players.append(player)
     }
     
     private func goodDrink(){
         startSpeaking()
-        FairyPlayerManager.playGoodDrink()
+        let player =  FairyPlayer()
+        player.delegate = self
+        player.playGoodDrink()
+        players.append(player)
     }
     
     private func drinkHighPace(){
         startSpeaking()
-        FairyPlayerManager.playDrinkHighPace()
+        let player =  FairyPlayer()
+        player.delegate = self
+        player.playDrinkHighPace()
+        players.append(player)
     }
     
     //ノーマルの感情表現切り替え
@@ -293,11 +319,15 @@ class FairyDishViewController: UIViewController {
     
     // タイマー走らせて口パクパク
     private func startSpeaking(){
-        speakingTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: Selector("speaking"), userInfo: nil, repeats: true)
         
-        // 最初は口を開ける
-        mouth.image = UIImage(named: talkingMouth["mouth"]!)
-        mouthClosed = false
+        if !isSpeaking{
+            speakingTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: Selector("speaking"), userInfo: nil, repeats: true)
+            
+            // 最初は口を開ける
+            mouth.image = UIImage(named: talkingMouth["mouth"]!)
+            mouthClosed = false
+            isSpeaking = true
+        }
     }
     
     //to speaking mode
@@ -307,9 +337,11 @@ class FairyDishViewController: UIViewController {
     }
     
     //口パクパクを終了
-    private func stopSpeaking(){
+    private func stopSpeaking(player:FairyPlayer){
         speakingTimer?.invalidate()
-        self.changeEmotion(self.emotion)
+        changeEmotion(self.emotion)
+        isSpeaking = false
+        //TODO:配列からplayer削除
     }
     
     private func changeSpeakingMouth(){
@@ -336,9 +368,9 @@ protocol FairyDishExecuteEndDelegate{
     func tappedEnd(vc:UIViewController)
 }
 
-extension FairyDishViewController:FairyPlayerManagerDelegate{
-    func endSpeaking() {
-        stopSpeaking()
+extension FairyDishViewController:FairyPlayerDelegate{
+    func endSpeaking(player:FairyPlayer) {
+        stopSpeaking(player)
     }
 }
 
