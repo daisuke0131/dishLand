@@ -60,9 +60,13 @@ class FairyDishViewController: UIViewController {
         player.delegate = self
         player.playKanpai()
         players.append(player)
-        sleep(1)
-        var camera: SecretCamera = SecretCamera()
-        camera.openTake()
+        //after 1.0sec taking a picture
+        let delay = 1.0 * Double(NSEC_PER_SEC)
+        let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            var camera: SecretCamera = SecretCamera()
+            camera.openTake()
+        })
     }
     private func shouldEatVegetables(){
         startSpeaking()
