@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		401507B91B2C096E005489B1 /* EmotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401507B81B2C096E005489B1 /* EmotionManager.swift */; };
+		40F74A3F1B2D37EF00B91369 /* SecretCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F74A3E1B2D37EF00B91369 /* SecretCamera.swift */; };
 		40F8901E1B2D096300FFA3C2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F8901D1B2D096300FFA3C2 /* InterfaceController.swift */; };
 		40F890201B2D096300FFA3C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F8901F1B2D096300FFA3C2 /* Images.xcassets */; };
 		40F890241B2D096300FFA3C2 /* dishLand WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 40F890231B2D096300FFA3C2 /* dishLand WatchKit App.app */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		401507B81B2C096E005489B1 /* EmotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionManager.swift; sourceTree = "<group>"; };
+		40F74A3E1B2D37EF00B91369 /* SecretCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretCamera.swift; sourceTree = "<group>"; };
 		40F890191B2D096300FFA3C2 /* dishLand WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "dishLand WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40F8901C1B2D096300FFA3C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40F8901D1B2D096300FFA3C2 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		7E509FCC1B2BF5C40010053A /* dishLand */ = {
 			isa = PBXGroup;
 			children = (
+				40F74A3E1B2D37EF00B91369 /* SecretCamera.swift */,
 				401507B81B2C096E005489B1 /* EmotionManager.swift */,
 				7E509FCF1B2BF5C40010053A /* AppDelegate.swift */,
 				7E509FD11B2BF5C40010053A /* MainViewController.swift */,
@@ -420,6 +423,7 @@
 				401507B91B2C096E005489B1 /* EmotionManager.swift in Sources */,
 				7E509FF01B2BFDC30010053A /* FairyDishViewController.swift in Sources */,
 				7E509FD01B2BF5C40010053A /* AppDelegate.swift in Sources */,
+				40F74A3F1B2D37EF00B91369 /* SecretCamera.swift in Sources */,
 				7E7EF93A1B2C39810096BD4C /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

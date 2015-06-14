@@ -25,7 +25,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var camera : SecretCamera = SecretCamera()
+        camera.openTake()
     }
     
     override func viewDidAppear(animated: Bool) {
