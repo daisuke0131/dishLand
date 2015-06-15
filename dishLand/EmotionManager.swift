@@ -72,6 +72,11 @@ final class EmotionManager: NSObject {
     private override init() {
         super.init()
         
+        analysis()
+    }
+    
+    private func analysis()
+    {
         // MotionManagerを生成.
         myMotionManager = CMMotionManager()
         
@@ -207,7 +212,6 @@ final class EmotionManager: NSObject {
         
         //取得開始
         myMotionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler:handler)
-        
     }
     
     private func normalMove()
@@ -275,5 +279,13 @@ final class EmotionManager: NSObject {
         self.counterMilSec = 0
     }
     
+    func stop()
+    {
+        myMotionManager.stopGyroUpdates()
+    }
     
+    func restart()
+    {
+        analysis()
+    }
 }
