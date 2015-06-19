@@ -8,9 +8,13 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="dishLand_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="dishLand_WatchKit_Extension">
                     <items>
-                        <button width="1" height="128" alignment="left" backgroundImage="face_okan" id="yMD-Md-ht5"/>
+                        <button width="1" height="128" alignment="left" backgroundImage="face_okan" id="yMD-Md-ht5">
+                            <connections>
+                                <action selector="speech" destination="AgC-eL-Hgc" id="lwi-Cz-8FP"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>

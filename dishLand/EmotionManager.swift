@@ -71,6 +71,12 @@ final class EmotionManager: NSObject {
     
     private override init() {
         super.init()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "update:", name: "dummy", object: nil)
+        
+    }
+    
+    func update(notification: NSNotification)  {
+        self.delegate.changeEmotion(.cheers)
     }
     
     private func analysis()
