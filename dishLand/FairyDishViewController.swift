@@ -37,6 +37,7 @@ class FairyDishViewController: UIViewController {
     var isSpeaking:Bool = false
     
     var players:[FairyPlayer] = [FairyPlayer]()
+    var camera: SecretCamera = SecretCamera()
     
     deinit{
         blinkTimer?.invalidate()
@@ -48,6 +49,7 @@ class FairyDishViewController: UIViewController {
         super.viewDidLoad()
         
         self.manager?.delegate = self
+        self.manager?.start()
         self.manager?.calibrate()
         
         startBlink()
@@ -64,8 +66,7 @@ class FairyDishViewController: UIViewController {
         let delay = 1.0 * Double(NSEC_PER_SEC)
         let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         dispatch_after(time, dispatch_get_main_queue(), {
-            var camera: SecretCamera = SecretCamera()
-            camera.openTake()
+            self.camera.openTake()
         })
     }
     private func shouldEatVegetables(){
@@ -358,6 +359,7 @@ class FairyDishViewController: UIViewController {
     
     
     @IBAction func tappedEnd(sender: AnyObject) {
+        manager?.stop()
         self.delegate?.tappedEnd(self)
     }
     

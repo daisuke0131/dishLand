@@ -329,7 +329,7 @@
 					};
 					40F890221B2D096300FFA3C2 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 96A372G96Q;
+						DevelopmentTeam = QQ7DK47Y9S;
 					};
 					7E509FC91B2BF5C40010053A = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -622,6 +622,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -646,6 +647,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b9a26c88-f100-4747-9908-d2bcfccef3a5";
 			};
 			name = Release;
 		};

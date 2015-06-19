@@ -71,8 +71,6 @@ final class EmotionManager: NSObject {
     
     private override init() {
         super.init()
-        
-        analysis()
     }
     
     private func analysis()
@@ -279,13 +277,14 @@ final class EmotionManager: NSObject {
         self.counterMilSec = 0
     }
     
-    func stop()
-    {
-        myMotionManager.stopGyroUpdates()
-    }
-    
-    func restart()
-    {
+    func start(){
+        self.isFirst = true
         analysis()
     }
+    
+    func stop()
+    {
+        myMotionManager.stopAccelerometerUpdates()
+    }
+    
 }
