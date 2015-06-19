@@ -54,8 +54,8 @@ final class EmotionManager: NSObject {
     
     private let waitingTime = 50.0
     // 感情変化の時間（5s）
-    private let threshold = 0.75
-    private let thresholdBig = 1.2
+    private let threshold = 0.5
+    private let thresholdBig = 0.75
     
     private var xRawData : Double = 0
     
@@ -165,7 +165,7 @@ final class EmotionManager: NSObject {
                     {
                         if(self.emotion != .anger && self.emotion != .happy)// 怒っている時と乾杯後は、喜には遷移しない
                         {
-                            if(self.gladCount > 20)
+                            if(self.gladCount > 15)
                             {
                                 self.delegate.changeEmotion(.glad)
                                 self.delegate.changeEmotion(.goodDrink)
@@ -182,7 +182,7 @@ final class EmotionManager: NSObject {
             else if(isMove)
             {
                 self.moveCount = self.moveCount + 1
-                self.counterMilSec = 0 // 動いたらゼロに戻る
+                //self.counterMilSec = 0 // 動いたらゼロに戻る
             }
             else
             {
