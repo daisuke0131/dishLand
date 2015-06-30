@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -17,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="e0N-x7-1fM">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="e0N-x7-1fM">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFY-80-3VA">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -58,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhS-uz-XdN">
-                                <rect key="frame" x="177" y="481" width="247" height="57"/>
+                                <rect key="frame" x="177" y="440" width="247" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="247" id="NEO-R2-CdU"/>
                                     <constraint firstAttribute="height" constant="57" id="dae-Qi-1fw"/>
@@ -78,7 +77,7 @@
                                 </constraints>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="title_okan" translatesAutoresizingMaskIntoConstraints="NO" id="TxK-e9-27T">
-                                <rect key="frame" x="163" y="63" width="274" height="72"/>
+                                <rect key="frame" x="163" y="89" width="274" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="Nt9-7E-cl5"/>
                                     <constraint firstAttribute="width" constant="274" id="Z5T-DF-R0Z"/>
@@ -87,11 +86,11 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="TxK-e9-27T" secondAttribute="centerX" id="3sb-iR-B6A"/>
-                            <constraint firstItem="PDa-P4-Sb6" firstAttribute="top" secondItem="TxK-e9-27T" secondAttribute="bottom" constant="42" id="ALq-7v-m5t"/>
-                            <constraint firstItem="EhS-uz-XdN" firstAttribute="top" secondItem="PDa-P4-Sb6" secondAttribute="bottom" constant="57" id="AR8-4t-Vnv"/>
-                            <constraint firstAttribute="centerY" secondItem="PDa-P4-Sb6" secondAttribute="centerY" id="d8b-Fv-dC0"/>
+                            <constraint firstAttribute="centerY" secondItem="PDa-P4-Sb6" secondAttribute="centerY" id="9X9-lg-iJo"/>
+                            <constraint firstItem="EhS-uz-XdN" firstAttribute="top" secondItem="PDa-P4-Sb6" secondAttribute="bottom" constant="16" id="Fib-i9-T5I"/>
                             <constraint firstAttribute="centerX" secondItem="PDa-P4-Sb6" secondAttribute="centerX" id="izs-fw-7B7"/>
                             <constraint firstAttribute="centerX" secondItem="EhS-uz-XdN" secondAttribute="centerX" id="n9F-6A-bxu"/>
+                            <constraint firstItem="PDa-P4-Sb6" firstAttribute="top" secondItem="TxK-e9-27T" secondAttribute="bottom" constant="16" id="qwl-Ik-VJE"/>
                         </constraints>
                     </view>
                 </viewController>
